@@ -16,10 +16,10 @@ public class Author implements Serializable{
     public Author() {
     }
 
-    public int IdCode() {
-        int Id = 5;
-        Id = 10 * Id + Objects.IdCode(this.name);
-        return Id;
+    public int hashCode() {
+        int hash = 5;
+        hash = 10 * hash + Objects.hashCode(this.name);
+        return hash;
     }
 
     
