@@ -12,8 +12,8 @@ package newpackage;
  */
 public enum ItemType {
     David(),
-    Rafael();
-
+    Rafael(),
+    Ferdinand();
     public void setAnimal(Animal animal) {
         this.animal = animal;
     }
