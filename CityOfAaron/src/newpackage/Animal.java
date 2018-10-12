@@ -6,20 +6,28 @@
 package newpackage;
 import java.io.Serializable;
 import java.util.Objects;
+
 /**
  *
  * @author dcars
  */
-public class Player implements Serializable{
-    private String name;    
+public class Animal implements Serializable{
+    String name;
+    int age;
 
-    public Player() {
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 17 * hash + Objects.hashCode(this.name);
+        hash = 71 * hash + Objects.hashCode(this.name);
+        hash = 71 * hash + this.age;
         return hash;
     }
 
@@ -30,11 +38,14 @@ public class Player implements Serializable{
         }
         if (obj == null) {
             return false;
-        }  
+        }
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Player other = (Player) obj;
+        final Animal other = (Animal) obj;
+        if (this.age != other.age) {
+            return false;
+        }
         if (!Objects.equals(this.name, other.name)) {
             return false;
         }
@@ -43,17 +54,19 @@ public class Player implements Serializable{
 
     @Override
     public String toString() {
-        return "Player{" + "name=" + name + '}';
+        return "Animal{" + "name=" + name + ", age=" + age + '}';
     }
-       
+
+    public Animal(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public int getAge() {
+        return age;
     }
-    
-    
 }
