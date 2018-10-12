@@ -5,6 +5,7 @@
  */
 package newpackage;
 import java.io.Serializable;
+import java.util.Arrays;
 /**
  *
  * @author rmonzon
@@ -12,7 +13,56 @@ import java.io.Serializable;
 public class Map implements Serializable{
     // Class variable 
    private int[][] location;
-   private int[][] points;
-    
+   private int[][] points;   
+
+    public void setLocation(int[][] location) {
+        this.location = location;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 31 * hash + Arrays.deepHashCode(this.location);
+        hash = 31 * hash + Arrays.deepHashCode(this.points);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Map other = (Map) obj;
+        if (!Arrays.deepEquals(this.location, other.location)) {
+            return false;
+        }
+        if (!Arrays.deepEquals(this.points, other.points)) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "Map{" + "location=" + location + ", points=" + points + '}';
+    }
+
+    public int[][] getLocation() {
+        return location;
+    }
+
+    public int[][] getPoints() {
+        return points;
+    }
+
+    public void setPoints(int[][] points) {
+        this.points = points;
+    }
     
 }

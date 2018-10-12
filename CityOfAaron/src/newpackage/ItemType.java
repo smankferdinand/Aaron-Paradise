@@ -11,12 +11,20 @@ package newpackage;
  * @author dcars
  */
 public enum ItemType {
+    David(),
+    Rafael();
+
+    public void setAnimal(Animal animal) {
+        this.animal = animal;
+    }
+
+    public void setProvision(Provision provision) {
+        this.provision = provision;
+    }
     private Animal animal;
-    private String tool;
     private Provision provision;
     ItemType(Animal animal, String tool, Provision provision){
         this.animal = animal;
-        this.tool = tool;
         this.provision = provision;
     }
 }

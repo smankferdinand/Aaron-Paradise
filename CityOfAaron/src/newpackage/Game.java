@@ -5,6 +5,7 @@
  */
 package newpackage;
 import java.io.Serializable;
+import java.util.Arrays;
 import java.util.Objects;
 /**
  *
@@ -12,8 +13,8 @@ import java.util.Objects;
  */
 public class Game implements Serializable{
     //Class instance Variables
-    private String name;
-    private String map;
+    private Player player;
+    private Map     map;
     private int    currentPopulation;
     private int    acresOwned;
     private int    whealtInStorage;
@@ -22,19 +23,19 @@ public class Game implements Serializable{
     }
     // Generate all the getter and setter 
     public String getName() {
-        return name;
+        return player.getName();
     }
 
     public void setName(String name) {
-        this.name = name;
+        player.setName(name);
     }
 
-    public String getMap() {
-        return map;
+    public String getMapLocation() {
+        return Arrays.toString(map.getLocation());
     }
 
-    public void setMap(String map) {
-        this.map = map;
+    public void setMap(Map map) {
+        map.setPoints(map.getPoints());
     }
 
     public int getCurrentPopulation() {
@@ -60,11 +61,11 @@ public class Game implements Serializable{
     public void setWhealtInStorage(int whealtInStorage) {
         this.whealtInStorage = whealtInStorage;
     }
-/// Generate hashCode and Equals 
+
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 97 * hash + Objects.hashCode(this.name);
+        int hash = 5;
+        hash = 97 * hash + Objects.hashCode(this.player);
         hash = 97 * hash + Objects.hashCode(this.map);
         hash = 97 * hash + this.currentPopulation;
         hash = 97 * hash + this.acresOwned;
@@ -90,10 +91,7 @@ public class Game implements Serializable{
         if (this.acresOwned != other.acresOwned) {
             return false;
         }
-        if (this.whealtInStorage != other.whealtInStorage) {
-            return false;
-        }
-        if (!Objects.equals(this.name, other.name)) {
+        if (!Objects.equals(this.player, other.player)) {
             return false;
         }
         if (!Objects.equals(this.map, other.map)) {
@@ -101,12 +99,4 @@ public class Game implements Serializable{
         }
         return true;
     }
-
-    @Override
-    public String toString() {
-        return "Game{" + "name=" + name + ", map=" + map + ", currentPopulation=" + currentPopulation + ", acresOwned=" + acresOwned + ", whealtInStorage=" + whealtInStorage + '}';
-    }
-    
-    
-    
 }
