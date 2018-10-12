@@ -42,7 +42,7 @@ public class Author implements Serializable{
 
     
     public String toString() {
-        return "Player{" + "name=" + name + '}';
+        return "author{" + "name=" + name + '}';
     }
        
 
