@@ -13,27 +13,37 @@ import java.util.Objects;
  * @author Smank Ferdinand
  */
 public enum Condition {
- Ferdinand(),
- Rafael(),
- David();
-
-    public void setGood(double good) {
-        this.good = good;
-        }
-    public void setFair(double fair) {
-        this.fair = fair;  
-    }
-    public void setPoor(double poor) {
-          this.poor = poor;
-    }
+  NAME(),
+  STATE();
     
-    private double good;
-    private double fair;
-    private double poor;
-    Condition(double good, String tool, double fair, double poor){
+// classes variable    
+    private final double good;
+    private final double fair;
+    private final double poor;
+    
+    Condition(double good, double fair, double poor){
         this.good = good;
         this.fair = fair;
         this.poor = poor;
     }
+
+    public double getGood() {
+        return good;
+    }
+
+    public double getFair() {
+        return fair;
+    }
+
+    public double getPoor() {
+        return poor;
+    }
+
+    @Override
+    public String toString() {
+        return "Condition{" + "good=" + good + ", fair=" + fair + ", poor=" + poor + '}';
+    }
+    
+    
     }
 

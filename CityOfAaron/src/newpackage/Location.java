@@ -15,7 +15,7 @@ public class Location implements Serializable{
     private int    NameId;
     private String address;
     private String description;
-    private Scena scena;
+    private Scene scene;
 
     public int getNameId() {
         return NameId;
@@ -29,8 +29,8 @@ public class Location implements Serializable{
         return description;
     }
 
-    public Scena getScena() {
-        return scena;
+    public Scene getScene() {
+        return scene;
     }
 
     public void setNameId(int NameId) {
@@ -45,8 +45,8 @@ public class Location implements Serializable{
         this.description = description;
     }
 
-    public void setScena(Scena scena) {
-        this.scena = scena;
+    public void setScene(Scene scene) {
+        this.scene = scene;
     }
 
     @Override
@@ -54,7 +54,7 @@ public class Location implements Serializable{
         int hash = 7;
         hash = 43 * hash + Objects.hashCode(this.address);
         hash = 43 * hash + Objects.hashCode(this.description);
-        hash = 43 * hash + Objects.hashCode(this.scena);
+        hash = 43 * hash + Objects.hashCode(this.scene);
         return hash;
     }
 
@@ -79,7 +79,7 @@ public class Location implements Serializable{
         if (!Objects.equals(this.description, other.description)) {
             return false;
         }
-        if (!Objects.equals(this.scena, other.scena)) {
+        if (!Objects.equals(this.scene, other.scene)) {
             return false;
         }
         return true;
@@ -87,14 +87,14 @@ public class Location implements Serializable{
 
     @Override
     public String toString() {
-        return "Location{" + "NameId=" + NameId + ", address=" + address + ", description=" + description + ", scena=" + scena + '}';
+        return "Location{" + "NameId=" + NameId + ", address=" + address + ", description=" + description + ", scene=" + scene + '}';
     }
 
-    public Location(int NameId, String address, String description, Scena scena) {
+    public Location(int NameId, String address, String description, Scene scene) {
         this.NameId = NameId;
         this.address = address;
         this.description = description;
-        this.scena = scena;
+        this.scene = scene;
     }
 
     public Location() {

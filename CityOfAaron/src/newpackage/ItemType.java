@@ -11,21 +11,32 @@ package newpackage;
  * @author dcars
  */
 public enum ItemType {
-    David(),
-    Rafael(),
-    Ferdinand();
-    public void setAnimal(Animal animal) {
+    NAME(),
+    STATE();
+    
+    // class variables 
+    private final String animal;
+    private final String provision;
+    // Contructor 
+    ItemType(String animal, String provision){
         this.animal = animal;
+        this.provision = provision;
+    }
+   // Getter statement
+    public String getAnimal() {
+        return animal;
     }
 
-    public void setProvision(Provision provision) {
-        this.provision = provision;
+    public String getProvision() {
+        return provision;
     }
-    private Animal animal;
-    private Provision provision;
-    ItemType(Animal animal, String tool, Provision provision){
-        this.animal = animal;
-        this.provision = provision;
+
+    @Override
+    public String toString() {
+        return "ItemType{" + "animal=" + animal + ", provision=" + provision + '}';
     }
+    
+    
+    
 }
 
