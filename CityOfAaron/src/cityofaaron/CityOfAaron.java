@@ -5,8 +5,10 @@
  */
 package cityofaaron;
 
+import newpackage.Scene;
+
 /**
- *
+ * Rafael Monzón
  * @author dcars
  */
 public class CityOfAaron {
@@ -16,6 +18,18 @@ public class CityOfAaron {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        //individul Assigment by Rafael Monzón
+        Scene Sceneone = new Scene();
+        
+        Sceneone.setName("Rafael Monzon");
+        Sceneone.setDescription("First scene ");
+       
+        
+        String SceneoneName = Sceneone.getName();
+        String SceneoneDescription = Sceneone.getDescription();
+        
+        System.out.println(Sceneone.toString());
     }
     
 }
