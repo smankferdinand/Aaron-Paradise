@@ -4,38 +4,34 @@
  * and open the template in the editor.
  */
 package newpackage;
-import java.io.Serializable;
-import java.util.Arrays;
-import java.util.Objects;
-
 /**
  *
  * @author Smank Ferdinand
  */
 public enum Condition {
-  NAME(),
-  STATE();
+  Name("Shovel","Hammer","Screw"),
+  Condition("Poor","Fair","Good");
     
 // classes variable    
-    private final double good;
-    private final double fair;
-    private final double poor;
+    private final String good;
+    private final String fair;
+    private final String poor;
     
-    Condition(double good, double fair, double poor){
+    Condition(String good, String fair, String poor){
         this.good = good;
         this.fair = fair;
         this.poor = poor;
     }
 
-    public double getGood() {
+    public String getGood() {
         return good;
     }
 
-    public double getFair() {
+    public String getFair() {
         return fair;
     }
 
-    public double getPoor() {
+    public String getPoor() {
         return poor;
     }
 

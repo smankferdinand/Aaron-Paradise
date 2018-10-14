@@ -11,8 +11,8 @@ package newpackage;
  * @author dcars
  */
 public enum ItemType {
-    NAME(),
-    STATE();
+    NAME("Rats","true"),
+    STATE("Rice","false");
     
     // class variables 
     private final String animal;

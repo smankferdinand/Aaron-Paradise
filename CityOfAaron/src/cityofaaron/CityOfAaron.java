@@ -22,14 +22,17 @@ public class CityOfAaron {
         //individul Assigment by Rafael Monzón
         Scene Sceneone = new Scene();
         
+        
         Sceneone.setName("Rafael Monzon");
         Sceneone.setDescription("First scene ");
+       
        
         
         String SceneoneName = Sceneone.getName();
         String SceneoneDescription = Sceneone.getDescription();
         
         System.out.println(Sceneone.toString());
+      
     }
     
 }
