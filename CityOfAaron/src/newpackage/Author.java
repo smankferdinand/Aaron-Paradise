@@ -14,6 +14,7 @@ public class Author implements Serializable{
     private String name;    
 
     public Author() {
+        this.name = "";
     }
 
     public int hashCode() {
