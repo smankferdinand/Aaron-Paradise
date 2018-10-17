@@ -17,6 +17,13 @@ public class Location implements Serializable{
     private String description;
     private Scene scene;
 
+    public Location() {
+        this.NameId = 0;
+        this.address = "";
+        this.description = "";
+        this.scene = null;
+    }
+    
     public int getNameId() {
         return NameId;
     }
@@ -97,8 +104,6 @@ public class Location implements Serializable{
         this.scene = scene;
     }
 
-    public Location() {
-    }
-    
+
     
 }

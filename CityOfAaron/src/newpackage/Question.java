@@ -15,6 +15,16 @@ public class Question implements Serializable{
     private String question;
     private String answer;
 
+    public Question(String question, String answer) {
+        this.question = question;
+        this.answer = answer;
+    }
+
+    public Question() {
+        this.question = "";
+        this.answer = "";
+    }
+    
     public String getQuestion() {
         return question;
     }

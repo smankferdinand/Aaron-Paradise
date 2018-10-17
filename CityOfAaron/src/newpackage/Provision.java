@@ -16,6 +16,13 @@ public class Provision implements Serializable{
     private Boolean perishable;    
 
     public Provision() {
+        this.name = "";
+        this.perishable = false;
+    }
+
+    public Provision(String name, Boolean perishable) {
+        this.name = name;
+        this.perishable = perishable;
     }
 
     public String getName() {
