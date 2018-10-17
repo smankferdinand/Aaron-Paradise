@@ -10,6 +10,7 @@ import newpackage.Scene;
 /**
  * Rafael Monzón
  * @author dcars
+ * @ Smank Ferdinand
  */
 public class CityOfAaron {
 
