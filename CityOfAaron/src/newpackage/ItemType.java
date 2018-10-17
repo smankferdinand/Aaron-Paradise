@@ -7,7 +7,7 @@ package newpackage;
 
 
 /**
- * @author dcars
+ * 
  * @author Smank Ferdinand
  */
 public enum ItemType {
