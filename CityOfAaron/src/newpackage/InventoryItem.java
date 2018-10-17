@@ -22,6 +22,30 @@ public class InventoryItem {
     private int columns;
     private Map Map;
 
+    public InventoryItem() {
+        this.Name = "";
+        this.ItemType = null;
+        this.Quantity = 0;
+        this.Condition = null;
+        this.pricePerUnit = 0.0;
+        this.rows = 0;
+        this.columns = 0;
+        this.Map = null;
+    }
+
+    
+    public InventoryItem(String Name, ItemType ItemType, int Quantity, Condition Condition, Double pricePerUnit, int rows, int columns, Map Map) {
+        this.Name = Name;
+        this.ItemType = ItemType;
+        this.Quantity = Quantity;
+        this.Condition = Condition;
+        this.pricePerUnit = pricePerUnit;
+        this.rows = rows;
+        this.columns = columns;
+        this.Map = Map;
+    }
+
+    
     public String getName() {
         return Name;
     }
@@ -90,6 +114,7 @@ public class InventoryItem {
     public String toString() {
         return "InventoryItem{" + "Name=" + Name + ", ItemType=" + ItemType + ", Quantity=" + Quantity + ", Condition=" + Condition + ", pricePerUnit=" + pricePerUnit + ", rows=" + rows + ", columns=" + columns + ", Map=" + Map + '}';
     }
+
 
     @Override
     public int hashCode() {

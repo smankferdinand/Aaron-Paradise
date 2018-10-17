@@ -18,9 +18,25 @@ public class Game implements Serializable{
     private int    currentPopulation;
     private int    acresOwned;
     private int    whealtInStorage;
+    
 // Build the contructor 
     public Game() {
+        this.player = null;
+        this.map = null;
+        this.currentPopulation = 0;
+        this.acresOwned = 0;
+        this.whealtInStorage =0;
     }
+
+    public Game(Player player, Map map, int currentPopulation, int acresOwned, int whealtInStorage) {
+        this.player = player;
+        this.map = map;
+        this.currentPopulation = currentPopulation;
+        this.acresOwned = acresOwned;
+        this.whealtInStorage = whealtInStorage;
+    }
+    
+    
     // Generate all the getter and setter 
     public String getName() {
         return player.getName();
