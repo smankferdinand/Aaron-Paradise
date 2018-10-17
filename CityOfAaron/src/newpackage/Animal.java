@@ -12,8 +12,19 @@ import java.util.Objects;
  * @author dcars
  */
 public class Animal implements Serializable{
-    String name;
-    int age;
+    private String name;
+    private int age;
+
+    public Animal(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public Animal() {
+        this.name = "";
+        this.age = 0;
+    }
+    
 
     public void setName(String name) {
         this.name = name;
@@ -57,10 +68,6 @@ public class Animal implements Serializable{
         return "Animal{" + "name=" + name + ", age=" + age + '}';
     }
 
-    public Animal(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
 
     public String getName() {
         return name;
