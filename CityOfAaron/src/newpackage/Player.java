@@ -8,7 +8,7 @@ import java.io.Serializable;
 import java.util.Objects;
 /**
  *
- * @Smank Ferdinand
+ * @author Smank Ferdinand
  */
 public class Player implements Serializable{
     private String name;    

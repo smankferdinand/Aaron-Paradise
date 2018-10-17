@@ -6,7 +6,7 @@
 package newpackage;
 /**
  *
- * @author Smank Ferdinand
+ * @ author Smank Ferdinand
  */
 public enum Condition {
   good,fair,poor;

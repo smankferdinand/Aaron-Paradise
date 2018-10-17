@@ -7,8 +7,8 @@ package newpackage;
 
 
 /**
- *
- * @Smank Ferdinand
+ * @author dcars
+ * @author Smank Ferdinand
  */
 public enum ItemType {
     NAME("Rats","true"),
