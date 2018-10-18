@@ -5,7 +5,7 @@
  */
 package cityofaaron;
 
-import newpackage.Scene;
+import newpackage.Player;
 
 /**
  * Rafael Monzón
@@ -21,18 +21,18 @@ public class CityOfAaron {
         // TODO code application logic here
         
         //individul Assigment by Rafael Monzón
-        Scene Sceneone = new Scene();
+        Player Playerone = new Player();
         
         
-        Sceneone.setName("Rafael Monzon");
-        Sceneone.setDescription("First scene ");
+        Playerone.setName("Rafael Monzon");
+        
        
        
         
-        String SceneoneName = Sceneone.getName();
-        String SceneoneDescription = Sceneone.getDescription();
+        String SceneoneName = Playerone.getName();
         
-        System.out.println(Sceneone.toString());
+        
+        System.out.println("Name = " + SceneoneName);
       
     }
     
