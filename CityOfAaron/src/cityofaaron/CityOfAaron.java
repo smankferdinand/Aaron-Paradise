@@ -6,6 +6,7 @@
 package cityofaaron;
 
 import newpackage.Player;
+import newpackage.Point;
 
 /**
  * Rafael Monzón
@@ -22,18 +23,22 @@ public class CityOfAaron {
         
         //individul Assigment by Rafael Monzón
         Player Playerone = new Player();
-        
-        
+       
         Playerone.setName("Rafael Monzon");
-        
-       
-       
         
         String SceneoneName = Playerone.getName();
         
-        
         System.out.println("Name = " + SceneoneName);
       
+         // Class Point 
+    // Class Point 
+        Point PointOne = new Point();
+        PointOne.setColumns(1);
+        PointOne.setRows(1);
+        int PointOneColumn = PointOne.getColumns();
+        int PointOneRow = PointOne.getRows();
+        System.out.println("Column = " + PointOneColumn +
+                           "\nRow = " +  PointOneRow );
     }
     
 }
