@@ -10,6 +10,7 @@ import newpackage.Location;
 import newpackage.Map;
 import newpackage.Player;
 import newpackage.Point;
+import newpackage.Provision;
 import newpackage.Question;
 
 /**
@@ -77,6 +78,14 @@ public class CityOfAaron {
          System.out.println("Question = " + QuestionAgains +
                             "\nAnswers = " + AnswerAgains);
          
+         // Class Provision
+         Provision Living = new Provision();
+         Living.setName("Rats");
+         Living.setPerishable(Boolean.TRUE);
+         String ProviName = Living.getName();
+         Boolean Prerish = Living.getPerishable();
+         System.out.println("Name = " + ProviName +
+                            "\nIt's Perishable = " + Prerish);
          
          
          

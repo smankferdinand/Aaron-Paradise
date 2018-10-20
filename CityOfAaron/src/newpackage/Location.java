@@ -15,53 +15,22 @@ public class Location implements Serializable{
     private int    NameId;
     private String address;
     private String description;
-    private Scene scene;
 
-    public Location() {
-        this.NameId = 0;
-        this.address = "";
-        this.description = "";
-        this.scene = null;
-    }
-    
-    public int getNameId() {
-        return NameId;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public Scene getScene() {
-        return scene;
-    }
-
-    public void setNameId(int NameId) {
+    public Location(int NameId, String address, String description) {
         this.NameId = NameId;
-    }
-
-    public void setAddress(String address) {
         this.address = address;
-    }
-
-    public void setDescription(String description) {
         this.description = description;
     }
 
-    public void setScene(Scene scene) {
-        this.scene = scene;
+    public Location() {
     }
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 43 * hash + Objects.hashCode(this.address);
-        hash = 43 * hash + Objects.hashCode(this.description);
-        hash = 43 * hash + Objects.hashCode(this.scene);
+        int hash = 5;
+        hash = 31 * hash + this.NameId;
+        hash = 31 * hash + Objects.hashCode(this.address);
+        hash = 31 * hash + Objects.hashCode(this.description);
         return hash;
     }
 
@@ -86,24 +55,39 @@ public class Location implements Serializable{
         if (!Objects.equals(this.description, other.description)) {
             return false;
         }
-        if (!Objects.equals(this.scene, other.scene)) {
-            return false;
-        }
         return true;
+    }
+
+    public int getNameId() {
+        return NameId;
+    }
+
+    public void setNameId(int NameId) {
+        this.NameId = NameId;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     @Override
     public String toString() {
-        return "Location{" + "NameId=" + NameId + ", address=" + address + ", description=" + description + ", scene=" + scene + '}';
+        return "Location{" + "NameId=" + NameId + ", address=" + address + ", description=" + description + '}';
     }
 
-    public Location(int NameId, String address, String description, Scene scene) {
-        this.NameId = NameId;
-        this.address = address;
-        this.description = description;
-        this.scene = scene;
-    }
-
-
+ 
     
 }
+   
