@@ -5,6 +5,9 @@
  */
 package cityofaaron;
 
+import java.util.Arrays;
+import newpackage.Location;
+import newpackage.Map;
 import newpackage.Player;
 import newpackage.Point;
 
@@ -31,7 +34,6 @@ public class CityOfAaron {
         System.out.println("Name = " + SceneoneName);
       
          // Class Point 
-    // Class Point 
         Point PointOne = new Point();
         PointOne.setColumns(1);
         PointOne.setRows(1);
@@ -39,6 +41,39 @@ public class CityOfAaron {
         int PointOneRow = PointOne.getRows();
         System.out.println("Column = " + PointOneColumn +
                            "\nRow = " +  PointOneRow );
+        
+        
+        //Class Location 
+         Location LocationOne = new Location();
+         LocationOne.setNameId(1);
+         LocationOne.setAddress("South 14587");
+         LocationOne.setDescription("The scene woods");
+         int LocationName = LocationOne.getNameId();
+         String LocationAddress = LocationOne.getAddress();
+         String LocationDescription = LocationOne.getDescription();
+         System.out.println("Name ID =" + LocationName +
+                            "\nAddress =" + LocationAddress +
+                            "\nDescription = " + LocationDescription);
+         
+         // Class Map
+         Map YouMap = new Map();
+        int[][] location = null;         
+         YouMap.setLocation(location);
+         int[][] points = null;
+         YouMap.setPoints(points);
+         int[][] MapLocationone = YouMap.getLocation();
+         int[][] MapPoints = YouMap.getPoints();
+         System.out.println("Location = " + Arrays.toString(MapLocationone) +
+                            "Points = " + Arrays.toString(MapPoints));
+         
+         
+         
+         
     }
+    
+   
+    
+    
+    
     
 }
