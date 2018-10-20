@@ -10,6 +10,7 @@ import newpackage.Location;
 import newpackage.Map;
 import newpackage.Player;
 import newpackage.Point;
+import newpackage.Question;
 
 /**
  * Rafael Monzón
@@ -64,7 +65,17 @@ public class CityOfAaron {
          int[][] MapLocationone = YouMap.getLocation();
          int[][] MapPoints = YouMap.getPoints();
          System.out.println("Location = " + Arrays.toString(MapLocationone) +
-                            "Points = " + Arrays.toString(MapPoints));
+                            "\nPoints = " + Arrays.toString(MapPoints));
+         
+         
+         // Class Question 
+         Question WhichQuestion = new Question();
+         WhichQuestion.setQuestion("How many waters bottles do you want now?");
+         WhichQuestion.setAnswer("I want to 25 waters bottles right now!!!!");
+         String QuestionAgains = WhichQuestion.getQuestion();
+         String AnswerAgains = WhichQuestion.getAnswer();
+         System.out.println("Question = " + QuestionAgains +
+                            "\nAnswers = " + AnswerAgains);
          
          
          
