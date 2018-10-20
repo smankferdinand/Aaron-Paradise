@@ -6,6 +6,8 @@
 package cityofaaron;
 
 import java.util.Arrays;
+import newpackage.Animal;
+import newpackage.Author;
 import newpackage.Location;
 import newpackage.Map;
 import newpackage.Player;
@@ -87,11 +89,21 @@ public class CityOfAaron {
          System.out.println("Name = " + ProviName +
                             "\nIt's Perishable = " + Prerish);
          
+         // Class Animal 
+         Animal BestAnimal = new Animal();
+         BestAnimal.setName("Elephant");
+         BestAnimal.setAge(85);
+         String MyNameis = BestAnimal.getName();
+         int Myageis = BestAnimal.getAge();
+         System.out.println(BestAnimal.toString());
          
-         
-    }
+         // Class Author
+         Author MyAuthor = new Author();
+         MyAuthor.setName("Rafael Monzon");
+         String BestAuthor = MyAuthor.getName();
+         System.out.println("Author = " + BestAuthor);
     
-   
+    }
     
     
     
