@@ -67,5 +67,5 @@ public class Map implements Serializable{
     public void setPoints(int[][] points) {
         this.points = points;
     }
-    
+
 }
