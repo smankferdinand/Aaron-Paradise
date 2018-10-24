@@ -17,16 +17,16 @@ public class ControlLayer {
 
     public static int wheatRatEaten(int rnd, int wheat) {
         int eaten = wheat;
-        int porcentaje = 0;
+        int percentage = 0;
         if (rnd <= 30) {
             if (rnd > 12) {
-                porcentaje = Random(3, 5);
+                percentage = Random(3, 5);
             } else if (rnd >= 8 & rnd <= 12) {
-                porcentaje = Random(3, 7);
+                percentage = Random(3, 7);
             } else {
-                porcentaje = Random(6, 10);
+                percentage = Random(6, 10);
             }
-            eaten = wheat * porcentaje / 100;
+            eaten = wheat * percentage / 100;
         }
         return eaten;
     }
