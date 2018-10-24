@@ -14,6 +14,9 @@ import newpackage.Player;
 import newpackage.Point;
 import newpackage.Provision;
 import newpackage.Question;
+import cityofaaron.ControlLayer;
+
+
 
 /**
  * Rafael Monzón
@@ -27,6 +30,13 @@ public class CityOfAaron {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        int rnd = Random(1,100);
+        int wheat = 150;
+        //ControlLayer test1 = new ControlLayer();
+        int eaterRats = ControlLayer.wheatRatEaten(rnd, wheat);
+        System.out.println("no se que.... ="+eaterRats);
+        
         
         //individul Assigment by Rafael Monzón
         Player Playerone = new Player();
@@ -103,6 +113,11 @@ public class CityOfAaron {
          String BestAuthor = MyAuthor.getName();
          System.out.println("Author = " + BestAuthor);
     
+    }
+
+    private static int Random(int i, int i0) {
+        return 5;
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     
