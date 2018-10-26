@@ -23,13 +23,13 @@ public class ControlLayerTest {
     @Test
     public void testWheatRatEaten() {
         System.out.println("wheatRatEaten");
-        int rnd = 0;
-        int wheat = 0;
+        int rnd = 5;
+        int wheat = 250;
         int expResult = 0;
         int result = ControlLayer.wheatRatEaten(rnd, wheat);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
     
 }
