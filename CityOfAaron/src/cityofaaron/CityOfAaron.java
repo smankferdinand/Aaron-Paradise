@@ -14,9 +14,6 @@ import newpackage.Player;
 import newpackage.Point;
 import newpackage.Provision;
 import newpackage.Question;
-import cityofaaron.ControlLayer;
-import cityofaaron.BottleofWaterControl;
-
 
 /**
  * Rafael Monzón
@@ -31,11 +28,20 @@ public class CityOfAaron {
     public static void main(String[] args) {
         // TODO code application logic here
         
+        /// Calculate The  amount wheat eaten by rats 
         int rnd = Random(1,100);
         int wheat = 150;
         //ControlLayer test1 = new ControlLayer();
         int eaterRats = ControlLayer.wheatRatEaten(rnd, wheat);
         System.out.println("no se que.... ="+eaterRats);
+        
+        
+        // Calculate The amount Harvest crop yield for bear the Tithes and offerings
+        int sort = Random(1,100);
+        int Tithes = 56;
+       //call the class 
+       int harvestTime = HarvestCrops.CalculateHarvest(sort, Tithes);
+       System.out.println("Your calculation is: "+harvestTime);
         
         
         //individul Assigment by Rafael Monzón
