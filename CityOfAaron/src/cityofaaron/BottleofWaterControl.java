@@ -16,7 +16,7 @@ import newpackage.*;
  */
 public class BottleofWaterControl {
 
-public static int watertaken(int rnd, int water) {
+    public static int waterTaken(int rnd, int water) {
         int taken = water;
         int percentage = 0;
         if (rnd <= 30) {

@@ -11,7 +11,7 @@ import newpackage.*;
 
 /**
  *
- * @author SG0206641
+ * @author David Carsin
  */
 public class ControlLayer {
 

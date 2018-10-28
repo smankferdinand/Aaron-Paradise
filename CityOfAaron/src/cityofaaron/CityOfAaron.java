@@ -17,7 +17,7 @@ import newpackage.Question;
 
 /**
  * Rafael Monzón
- * @author dcars
+ * @author David Carsin
  * @ Smank Ferdinand
  */
 public class CityOfAaron {
