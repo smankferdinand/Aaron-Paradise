@@ -1,9 +1,9 @@
+package cityofaaron;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package cityofaaron;
 import cityofaaron.CityOfAaron;
 import java.util.Random;
 import newpackage.*;
@@ -16,7 +16,7 @@ import newpackage.*;
  */
 public class BottleofWaterControl {
 
-    public static int waterTaken(int rnd, int water) {
+    public static int watertaken(int rnd, int water) {
         int taken = water;
         int percentage = 0;
         if (rnd <= 30) {
