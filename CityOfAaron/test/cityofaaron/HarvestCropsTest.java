@@ -36,7 +36,7 @@ public class HarvestCropsTest {
         // create instance 
       //  ControlLayer  newlayer = new ControlLayer();
         // expected output 
-        int expResult = 440;
+        int expResult = 0;
         // call the function 
         int result = HarvestCrops.CalculateHarvest(wheats,tithes);
         
@@ -49,12 +49,12 @@ public class HarvestCropsTest {
         */
        System.out.println("\tTes number 02");
         //input for users 
-        wheats  = 50;
-        tithes  = 5500;
+        wheats  = 80;
+        tithes  = 3200;
         // create instance 
         //  ControlLayer  newlayer = new ControlLayer();
         // expected output 
-         expResult = 440;
+         expResult = 35;
         // call the function 
          result = HarvestCrops.CalculateHarvest(wheats,tithes);
         
@@ -66,12 +66,12 @@ public class HarvestCropsTest {
         */
          System.out.println("\tTes number 03");
         //input for users 
-         wheats  = 50;
-         tithes  = 5500;
+         wheats  = 90;
+         tithes  = 6250;
         // create instance 
         //  ControlLayer  newlayer = new ControlLayer();
         // expected output 
-         expResult = 440;
+         expResult = 35;
         // call the function 
          result = HarvestCrops.CalculateHarvest(wheats,tithes);
         
@@ -82,8 +82,8 @@ public class HarvestCropsTest {
         */
         System.out.println("\tTes number 04");
         //input for users 
-         wheats  = 50;
-         tithes  = 5500;
+         wheats  = 70;
+         tithes  = 9050;
         // create instance 
         //  ControlLayer  newlayer = new ControlLayer();
         // expected output 
@@ -99,7 +99,7 @@ public class HarvestCropsTest {
         */
          System.out.println("\tTes number 05");
         //input for users 
-         wheats  = 50;
+         wheats  = 10;
          tithes  = 5500;
         // create instance 
         //  ControlLayer  newlayer = new ControlLayer();
@@ -117,12 +117,12 @@ public class HarvestCropsTest {
         */
         System.out.println("\tTes number 06");
         //input for users 
-         wheats  = 50;
-         tithes  = 5500;
+         wheats  = 30;
+         tithes  = 2010;
         // create instance 
       //  ControlLayer  newlayer = new ControlLayer();
         // expected output 
-         expResult = 440;
+         expResult = 0;
         // call the function 
         result = HarvestCrops.CalculateHarvest(wheats,tithes);
          
@@ -135,7 +135,7 @@ public class HarvestCropsTest {
         */
          System.out.println("\tTes number 07");
         //input for users 
-         wheats  = 50;
+         wheats  = 60;
          tithes  = 5500;
         // create instance 
         //  ControlLayer  newlayer = new ControlLayer();
