@@ -18,45 +18,34 @@ public class Scene implements Serializable{
     private Question question;
     private InventoryItem inventoryItem;
 
-    public Scene() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public void setName(String name) {
+    public Scene(String name, String description, Question question, InventoryItem inventoryItem) {
         this.name = name;
-    }
-
-    public void setDescription(String description) {
         this.description = description;
-    }
-
-    public void setQuestion(Question question) {
         this.question = question;
-    }
-
-    public void setInventoryItem(InventoryItem inventoryItem) {
         this.inventoryItem = inventoryItem;
     }
 
-    public String getName() {
-        return name;
+    
+    public Scene() {
+        this.name = "";
+        this.description = "";
+        this.question = null;
+        this.inventoryItem = null;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public Question getQuestion() {
-        return question;
+    
+    @Override
+    public String toString() {
+        return "Scene{" + "name=" + name + ", description=" + description + ", question=" + question + ", inventoryItem=" + inventoryItem + '}';
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 29 * hash + Objects.hashCode(this.name);
-        hash = 29 * hash + Objects.hashCode(this.description);
-        hash = 29 * hash + Objects.hashCode(this.question);
-        hash = 29 * hash + Objects.hashCode(this.inventoryItem);
+        hash = 53 * hash + Objects.hashCode(this.name);
+        hash = 53 * hash + Objects.hashCode(this.description);
+        hash = 53 * hash + Objects.hashCode(this.question);
+        hash = 53 * hash + Objects.hashCode(this.inventoryItem);
         return hash;
     }
 
@@ -87,20 +76,36 @@ public class Scene implements Serializable{
         return true;
     }
 
-    public InventoryItem getInventoryItem() {
-        return inventoryItem;
+    
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public Scene(String name, String description, Question question, InventoryItem inventoryItem) {
-        this.name = name;
+    public void setDescription(String description) {
         this.description = description;
+    }
+
+    public void setQuestion(Question question) {
         this.question = question;
+    }
+
+    public void setInventoryItem(InventoryItem inventoryItem) {
         this.inventoryItem = inventoryItem;
     }
 
-    @Override
-    public String toString() {
-        return "Scene{" + "name=" + name + ", description=" + description + ", question=" + question + ", inventoryItem=" + inventoryItem + '}';
+    public String getName() {
+        return name;
     }
-    
+
+    public String getDescription() {
+        return description;
+    }
+
+    public Question getQuestion() {
+        return question;
+    }
+
+    public InventoryItem getInventoryItem() {
+        return inventoryItem;
+    }
 }

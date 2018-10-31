@@ -11,23 +11,17 @@ package cityofaaron;
  */
 public class HarvestCrops {
 
-    public static int CalculateHarvest(int wheats, int tithes) {
-
-        int percentage = 0;
-        if(tithes < 0) 
-            return - 1; 
-        if(wheats < 0)
-            return -2;
-        if (tithes > 12) {
-            percentage = Randoms(2, 5);
-        } else if (tithes >= 8 & tithes <= 12) {
-            percentage = Randoms(2, 4);
+    public static int CalculateHarvest(int wheats, int cropYield) {
+        int grouth = 0;
+        if (cropYield > 12) {
+            grouth = (100 + Randoms(2, 5))/100;
+        } else if (cropYield >= 8 & cropYield <= 12) {
+            grouth = (100 + Randoms(2, 4))/100;
         } else {
-            percentage = Randoms(1, 3);
+            grouth = (100 + Randoms(1, 3))/100;
         }
-        int amount = (percentage * wheats) / 100;
-
-        return amount;
+        wheats *= grouth;
+        return wheats;
     }
 
     private static int Randoms(int k, int k0) {

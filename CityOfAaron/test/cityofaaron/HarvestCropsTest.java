@@ -135,14 +135,17 @@ public class HarvestCropsTest {
         */
          System.out.println("\tTes number 07");
         //input for users 
-         wheats  = 60;
-         tithes  = 5500;
+         wheats  = 5;
+         tithes  = 56;
         // create instance 
         //  ControlLayer  newlayer = new ControlLayer();
         // expected output 
-         expResult = 440;
+         expResult = 5;
         // call the function 
         result = HarvestCrops.CalculateHarvest(wheats,tithes);
+         System.out.println(wheats);
+         System.out.println(tithes);
+         System.out.println(result);
     }
     
 }
