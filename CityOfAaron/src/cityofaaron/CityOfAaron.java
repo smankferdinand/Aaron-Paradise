@@ -14,6 +14,7 @@ import newpackage.Player;
 import newpackage.Point;
 import newpackage.Provision;
 import newpackage.Question;
+import newpackage.Game;
 
 /**
  * Rafael Monzón
@@ -27,8 +28,31 @@ public class CityOfAaron {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        //TestClasses();
         
-        /// Calculate The  amount wheat eaten by rats 
+        Game game = new Game();
+        game.setCurrentPopulation(100);
+        int population = game.getCurrentPopulation();
+        population += populationGrouth(game.getCurrentPopulation());
+        game.setCurrentPopulation(population);
+        
+        
+    
+    }
+
+    private static int Random(int i, int i0) {
+        return 5;
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    private static int populationGrouth(int population){
+        int grouth = Random(1, 5);
+        int movedIntoCity = population * (grouth/100);
+        return grouth;
+    }
+       
+    public static void TestClasses(){
+                /// Calculate The  amount wheat eaten by rats 
         int rnd = Random(1,100);
         int wheat = 150;
         //ControlLayer test1 = new ControlLayer();
@@ -118,15 +142,5 @@ public class CityOfAaron {
          MyAuthor.setName("Rafael Monzon");
          String BestAuthor = MyAuthor.getName();
          System.out.println("Author = " + BestAuthor);
-    
     }
-
-    private static int Random(int i, int i0) {
-        return 5;
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
-    
-    
-    
 }
