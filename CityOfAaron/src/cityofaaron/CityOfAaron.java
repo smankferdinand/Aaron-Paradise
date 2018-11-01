@@ -27,6 +27,14 @@ public class CityOfAaron {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
+        int bushels = 10;
+        int wheatInStorage = 100;
+       //call the class 
+       int rest = FeedPeople.CalculateHarvest(bushels, wheatInStorage);
+       System.out.println("Your bushels of grain left is: "+rest);
+        
+        
         // TODO code application logic here
         //TestClasses();
         
