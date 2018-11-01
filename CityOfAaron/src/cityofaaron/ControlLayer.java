@@ -33,6 +33,6 @@ public class ControlLayer {
 
     private static int Random(int i, int i0) {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        return 8;
+        return 5;
     }
 }
