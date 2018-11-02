@@ -11,71 +11,94 @@ import java.util.Scanner;
  *
  * @author Rafael.M
  */
-public class MainMenu extends MenuView {
-
-    Scanner keyboard = new Scanner(System.in);
-
-    public MainMenu() {
-
-        Menu("\n"
-                + "*****************************************************\n"
-                + "*  Welcome : Great City Of Aarom MAIN MENU   *\n"
-                + "*****************************************************\n"
-                + " 1 - Start New Game\n"
-                + " 2 - Get and Start a Saved Game\n"
-                + " 3 - Get Help \n"
-                + " 4 - Save Game\n"
-                + " 5 - Quit\n",
-                5);
+public class MainMenu {
+    
+    public static void main(String[] args) {
+        int opt = 1;
+        do {                        
+            MainMenuView();
+            opt = SelectOneOption(1,5);
+            doActionMainMenuView(opt);
+        } while (opt != 5);
+    }
+    
+    
+    public static void GameMenuView(String playerName) {
+        System.out.println(" 1 - View the map\n 2 - Move to a new location\n"
+                            +" 3 - Manage the Crops\n 4 - Live the Year\n"
+                            +" 5 - Reports Menu\n 6 - Save Game\n"
+                            +" 7 - Return to the Main Menu\n");
     }
 
-    private void Menu(String string, int i) {
-
+    public static void MainMenuView() {
+        System.out.println("*****************************************************\n"
+                         + "***   Welcome : Great City Of Aarom MAIN MENU     ***\n"
+                         + "*****************************************************\n"
+                         + " 1 - Start New Game\n 2 - Get and Start a Saved Game\n"
+                         + " 3 - Get Help \n 4 - Save Game\n 5 - Quit\n");
     }
 
-    public void doAction(int option) {
-      
+    public static void doActionGameMenu(int option) {
+        switch (option) {            
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+            case 6:
+                break;
+            case 7:
+                break;
+        }
+    }
+    public static void doActionMainMenuView(int option) {
         switch (option) {
             
             case 1:
-                startNewGame();
-                break;
-         
+                String playerName = startNewGame();
+                GameMenuView(playerName);                
+                int opt = SelectOneOption(1,7);
+                doActionGameMenu(opt);
+                break;         
             case 2:
+                System.out.println("You selected option 2\n");
                 startSavedGame();
                 break;
           
             case 3:
+                System.out.println("You selected option 3\n");
                 HelpMenu();
                 break;
            
             case 4:
+                System.out.println("You selected option 4\n");
                 SaveGame();
                 break;
            
             case 5:
+                System.out.println("You selected option 5\n");
                 System.out.println("Thanks for playing! Goodbye =D\n");
+                break;                
         }
     }
 
-    public void startNewGame() {
-
-        System.out.println(
-                "***********************************************************\n"
-                + "* Welcome to the City of Aaron. Awesome Game!  *\n"
-                + "***********************************************************/n");
-
-        String name;
+    public static String startNewGame() {
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println("***********************************************************\n"
+                            + "* Welcome to the City of Aaron. Awesome Game!  *\n"
+                            + "***********************************************************/n");
         System.out.println("Please enter your first name: ");
-        name = keyboard.next();
-
-        System.out.println("Welcome " + name + ". Have fun playing.");
-
-        GameMenu.createNewGame(name);
-
+        String name = keyboard.next();
+        System.out.println("Welcome " + name + ". Have fun playing!\n");
+        return name;
     }
 
-    public void startSavedGame() {
+    public static void startSavedGame() {
         System.out.println("Start Saved Game option Selected");
 
         Scanner input = new Scanner(System.in);
@@ -88,12 +111,31 @@ public class MainMenu extends MenuView {
 
     }
 
-    private void HelpMenu() {
+    private static void HelpMenu() {
       
     }
 
-    private void SaveGame() {
+    private static void SaveGame() {
       
     }
-
+    
+    private static int SelectOneOption(int min, int max){
+        String entry;       
+        Scanner keyboard = new Scanner(System.in);
+        int entered = 0;
+        do {            
+            System.out.print("Please select one option:");
+            entry = keyboard.nextLine();  
+            char opt = entry.charAt(0);
+            entered = opt - '0';
+            System.out.println("     Valor: "+entered);
+            if (entered < min || entered > max){
+                System.out.print("Sorry :( \n\'"+opt+"\', that's not an option.\n The available options are: ");
+                for (int i = min; i == max; i++)
+                    System.out.print(i + ", ");        
+                System.out.print(" please try again...\n");
+            }
+        } while (entered >= min && entered <= max);
+        return entered;
+    }
 }

@@ -26,27 +26,27 @@ public class CityOfAaron {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    //public static void main(String[] args) {
         
         int bushels = 10;
         int wheatInStorage = 100;
        //call the class 
        int rest = FeedPeople.CalculateHarvest(bushels, wheatInStorage);
-       System.out.println("Your bushels of grain left is: "+rest);
+       //System.out.println("Your bushels of grain left is: "+rest);
         
         
         // TODO code application logic here
         //TestClasses();
         
         Game game = new Game();
-        game.setCurrentPopulation(100);
+        //game.setCurrentPopulation(100);
         int population = game.getCurrentPopulation();
-        population += populationGrouth(game.getCurrentPopulation());
-        game.setCurrentPopulation(population);
+        //population += populationGrouth(game.getCurrentPopulation());
+        //1game.setCurrentPopulation(population);
         
         
     
-    }
+    //}
 
     private static int Random(int i, int i0) {
         return 5;
