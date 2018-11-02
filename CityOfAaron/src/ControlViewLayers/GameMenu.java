@@ -11,13 +11,13 @@ import java.util.Scanner;
  *
  * @author Rafael.M
  */
-public class MainMenu {
+public class GameMenu {
     
     public static void main(String[] args) {
         int opt = 1;
         do {                        
             MainMenuView();
-            opt = SelectOneOption(1,5);
+            opt = getInputs(1,5);
             doActionMainMenuView(opt);
         } while (opt != 5);
     }
@@ -62,7 +62,7 @@ public class MainMenu {
             case 1:
                 String playerName = startNewGame();
                 GameMenuView(playerName);                
-                int opt = SelectOneOption(1,7);
+                int opt = getInputs(1,7);
                 doActionGameMenu(opt);
                 break;         
             case 2:
@@ -71,7 +71,6 @@ public class MainMenu {
                 break;
           
             case 3:
-                System.out.println("You selected option 3\n");
                 HelpMenu();
                 break;
            
@@ -92,9 +91,11 @@ public class MainMenu {
         System.out.println("***********************************************************\n"
                             + "* Welcome to the City of Aaron. Awesome Game!  *\n"
                             + "***********************************************************/n");
-        System.out.println("Please enter your first name: ");
+        System.out.print("Please enter your first name: ");
         String name = keyboard.next();
+        System.out.println("***********************************************************\n");
         System.out.println("Welcome " + name + ". Have fun playing!\n");
+        System.out.println("***********************************************************\n");
         return name;
     }
 
@@ -119,7 +120,7 @@ public class MainMenu {
       
     }
     
-    private static int SelectOneOption(int min, int max){
+    private static int getInputs(int min, int max){
         String entry;       
         Scanner keyboard = new Scanner(System.in);
         int entered = 0;
@@ -131,11 +132,11 @@ public class MainMenu {
             System.out.println("     Valor: "+entered);
             if (entered < min || entered > max){
                 System.out.print("Sorry :( \n\'"+opt+"\', that's not an option.\n The available options are: ");
-                for (int i = min; i == max; i++)
+                for (int i = min; i < max+1; i++)
                     System.out.print(i + ", ");        
                 System.out.print(" please try again...\n");
             }
-        } while (entered >= min && entered <= max);
-        return entered;
+        } while (entered < min || entered > max);
+        return entered; 
     }
 }
