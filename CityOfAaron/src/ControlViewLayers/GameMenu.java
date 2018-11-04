@@ -7,7 +7,6 @@ package ControlViewLayers;
 
 import newpackage.Player;
 import newpackage.Game;
-import newpackage.Map;
 import java.util.Scanner;
 /**
  *
@@ -39,7 +38,34 @@ public class GameMenu {
                          + "***   Welcome : Great City Of Aarom MAIN MENU     ***\n"
                          + "*****************************************************\n"
                          + " 1 - Start New Game\n 2 - Load a Saved Game\n"
-                         + " 3 - Get Help \n 4 - Save Game\n 5 - Quit\n");
+                         + " 3 - Get Help \n 4 - Save Game\n 5 - Quit or Exit\n");
+    }
+    
+    public static void GameMenuHelpView() {
+        System.out.println("\nPlease select option HELP needed:\n"
+                            +"1 - What is the goal of the game?\n"
+                            +"2 - How to move\n"
+                            +"3 - Estimate the number of resources\n"
+                            +"4 - Harvest resources\n"
+                            +"5 - Delivering resources to warehouse\n"
+                            +"6 - Quit\n"); 
+    }
+    
+    public static void doActionHelp(int option) {
+        switch (option) {            
+            case 1: //What is the goal of the game?
+                break;
+            case 2: //How to move
+                break;
+            case 3: //Estimate the number of resources
+                break;
+            case 4: //Harvest resources
+                break;
+            case 5: //Delivering resources to warehouse
+                break;
+            case 6: //Quit
+                break;
+        }
     }
     
     public static void doActionGameMenu(int option,Game runningGame) {
@@ -76,11 +102,13 @@ public class GameMenu {
                 //Game savedGame = getInputs(4,6);    
                 GameMenuView(runningGame);                                        
                 opt = getInputs(1,7);
-                doActionGameMenu(opt, runningGame);
+                doActionHelp(opt);
                 break;
           
             case 3:
-                HelpMenu();
+                GameMenuHelpView();                                                   
+                opt = getInputs(1,6);
+                doActionGameMenu(opt, runningGame);
                 break;
            
             case 4:
@@ -120,10 +148,6 @@ public class GameMenu {
         return savedGame;
     }
 
-    private static void HelpMenu() {
-        //under construction!
-    }
-
     private static void SaveGame(Game actualGame) {
         //idem but reverse of option 2.
         //At this option, we will SAVE somewhere the game
@@ -138,7 +162,6 @@ public class GameMenu {
             entry = keyboard.nextLine();  
             char opt = entry.charAt(0);
             entered = opt - '0';
-            System.out.println("     Valor: "+entered);
             if (entered < min || entered > max){
                 System.out.print("Sorry :( \n\'"+opt+"\', that's not an option.\n The available options are: ");
                 for (int i = min; i < max+1; i++)
