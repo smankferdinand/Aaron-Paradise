@@ -16,6 +16,9 @@ public class Map implements Serializable{
    private int[][] points;   
 
     public Map() {
+        int [][] arr= {};
+        location =  arr;
+        points =  arr;
     }
 
        public void setLocation(int[][] location) {

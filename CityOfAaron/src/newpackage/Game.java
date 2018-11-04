@@ -42,9 +42,10 @@ public class Game implements Serializable{
         return player.getName();
     }
 
-    public void setName(String name) {
-        player.setName(name);
+    public void setPlayer(Player player) {
+        this.player = player;
     }
+
 
     public String getMapLocation() {
         return Arrays.toString(map.getLocation());

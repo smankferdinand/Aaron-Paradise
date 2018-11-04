@@ -17,6 +17,10 @@ public class Player implements Serializable{
         this.name = "";
     }
 
+    public Player(String playerName) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     @Override
     public int hashCode() {
         int hash = 7;
@@ -55,6 +59,7 @@ public class Player implements Serializable{
     public void setName(String name) {
         this.name = name;
     }
+
     
     
 }
