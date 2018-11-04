@@ -68,6 +68,8 @@ public class GameMenu {
             case 2:
                 System.out.println("You selected option 2\n");
                 startSavedGame();
+                int opt1 = getInputs(4,6);
+                doActionGameMenu(opt1);
                 break;
           
             case 3:
@@ -77,6 +79,8 @@ public class GameMenu {
             case 4:
                 System.out.println("You selected option 4\n");
                 SaveGame();
+                int opt2 = getInputs(4,6);
+                doActionGameMenu(opt2);
                 break;
            
             case 5:
