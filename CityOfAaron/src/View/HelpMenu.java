@@ -64,11 +64,14 @@ public class HelpMenu {
     }
 
     private void goalGame() {
-        System.out.println("You have called option G for goalGame...");
+        System.out.println("To know the goals of the game, the user have to start the playing the game, "
+                + "as the user proceeds forth, he/she will get the know the actual goal of the game."); 
     }
     
     private void moveGame() {
-        System.out.println("You have called option M for Move Game...");
+        System.out.println("-	To move to another location, the user have to press ctrl+ L, "
+                + "to refer to the map, the screen will pop with direction how on to locate "
+                + "and move to some areas in the map.");
     }
     
     private void estimateGame() {
