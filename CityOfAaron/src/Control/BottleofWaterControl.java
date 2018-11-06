@@ -1,4 +1,4 @@
-package cityofaaron;
+package Control;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -6,7 +6,6 @@ package cityofaaron;
  */
 import cityofaaron.CityOfAaron;
 import java.util.Random;
-import newpackage.*;
 
 
 /**

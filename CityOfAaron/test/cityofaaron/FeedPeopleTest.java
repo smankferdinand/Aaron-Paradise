@@ -5,6 +5,7 @@
  */
 package cityofaaron;
 
+import Control.FeedPeople;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
