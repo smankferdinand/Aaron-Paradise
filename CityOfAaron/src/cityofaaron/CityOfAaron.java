@@ -18,6 +18,7 @@ import Model.Point;
 import Model.Provision;
 import Model.Question;
 import Model.Game;
+import View.StartProgramView;
 
 /**
  * Rafael Monzón
@@ -30,6 +31,8 @@ public class CityOfAaron {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        StartProgramView startView = new StartProgramView();
+        startView.display();
       
         
     }
