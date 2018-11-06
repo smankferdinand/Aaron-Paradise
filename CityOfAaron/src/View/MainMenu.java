@@ -55,6 +55,7 @@ public class MainMenu {
             case "S":
                saveGame();
                 break;
+            default: System.out.println("Invalid option, please try again...");
         }
         return false;
     }

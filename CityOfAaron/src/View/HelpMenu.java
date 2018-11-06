@@ -58,6 +58,7 @@ public class HelpMenu {
             case "D":
                 DeliveringGame();
                 break;
+            default: System.out.println("Invalid option, please try again...");
         }
         return false;
     }
