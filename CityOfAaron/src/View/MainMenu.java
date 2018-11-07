@@ -68,8 +68,20 @@ public class MainMenu {
     
     private void startNewGame() {
         System.out.println("You have called option N for New Game...");
+      
+      // Prompt for and get the user's name
+        String name;
+        System.out.println("Please type in your first name: ");
+        name = keyboard.nextLine();
+        
+         // Display a welcome message
+        System.out.println("Welcome " + name + ". Have fun playing."); 
+         
+        //show the game menu
+        GameMenuView gmv = new GameMenuView();
+        gmv.displayMenu()
     }
-    
+        
     private void loadGame() {
         System.out.println("You have called option L for Load Game...");
     }
