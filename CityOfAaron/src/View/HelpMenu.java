@@ -72,7 +72,7 @@ public class HelpMenu {
     private void moveGame() {
         System.out.println("-	To move to another location, the user have to press ctrl+ L, \n"
                 + "to refer to the map, the screen will pop with direction how on to locate, \n "
-                + "and move to some areas in the map.\n");
+                + "and move to some areas in the map.");
     }
 
     private void estimateGame() {
