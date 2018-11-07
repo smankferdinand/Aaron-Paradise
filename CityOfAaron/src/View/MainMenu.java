@@ -79,7 +79,7 @@ public class MainMenu {
          
         //show the game menu
         GameMenuView gmv = new GameMenuView();
-        gmv.displayMenu()
+        gmv.display();
     }
         
     private void loadGame() {
