@@ -91,7 +91,7 @@ public class HelpMenu {
 
     private void DeliveringGame() {
         System.out.println("To return to the main menu, the user has to press Ctrl + D,\n"
-                + "Doing so, a screen will pop with an option ¨Yes or No¨,\n"
+                + "Doing so, a screen will pop with an option \"Yes or No\",\n"
                 + "asking the user if truly he/she wants to return back to\n"
                 + "the main menu, if not the user will continue the game. ");
     }

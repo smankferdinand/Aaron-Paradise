@@ -16,10 +16,11 @@ public class StartProgramView {
     public StartProgramView() {
     }
     
+    
     public void display(){
-        System.out.println("***********************************************************\n"
-                            + "* Welcome to the City of Aaron Game. Awesome Game!  *\n"
-                            + "***********************************************************/n");
+        System.out.println  ("***********************************************************\n"
+                            +"**** Welcome to the City of Aaron Game. Awesome Game! *****\n"
+                            +"***********************************************************\n");
         getInput();
         MainMenu main = new MainMenu();
         main.display();
@@ -34,9 +35,9 @@ public class StartProgramView {
             if (name.isEmpty())
                 System.out.println("Please add valid name:");  
         } while (name.isEmpty());
-        System.out.println("***********************************************************\n");
-        System.out.println("Welcome " + name + ". Have fun playing!\n");
-        System.out.println("***********************************************************\n");
+        System.out.println  ("***********************************************************\n");
+        System.out.println  ("********* Welcome " + name + ". Have fun playing! *********\n");
+        System.out.println  ("***********************************************************\n");
         
     }
     
