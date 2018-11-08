@@ -71,6 +71,7 @@ public class MainMenu {
       
       // Prompt for and get the user's name
         String name;
+        Scanner keyboard = new Scanner(System.in);
         System.out.println("Please type in your first name: ");
         name = keyboard.nextLine();
         
