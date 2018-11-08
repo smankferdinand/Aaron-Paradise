@@ -76,6 +76,8 @@ public class GameMenuView {
 
     public void newLocation() {
         System.out.println("You selected New Location...");
+        NewLocationView newLoc = new NewLocationView();
+        newLoc.display();
     }
     
     public void manageCrops() {
@@ -88,6 +90,8 @@ public class GameMenuView {
     
     public void reportMenu() {
         System.out.println("You selected Report Menu...");
+        ReportMenuView report = new ReportMenuView();
+        report.display();
     }
     
     public void saveGame() {
