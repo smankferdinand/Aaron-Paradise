@@ -34,7 +34,9 @@ public class GameMenuView {
                             + "C - Manage the Crops\n "
                             + "L - Live the Year\n"
                             + "R - Reports Menu\n "
-                            + "S - Save Game\n"
+                            + "S - Save Game\n"   
+                            +"B-Buy Land\n" 
+                            +"W-Ware House\n"
                             + "E - Return to the Main Menu\n");
             String input = getInput();
             done = doAction(input);
@@ -67,6 +69,12 @@ public class GameMenuView {
                 break;
             case "S":
                 saveGame();
+                break;
+            case "B":
+                BuyLand();
+                break;
+             case "W":
+                WareHouse();
                 break;
             default:
                 System.out.println("Invalid option, please try again...");
@@ -102,5 +110,14 @@ public class GameMenuView {
         System.out.println("You selected Save Game...");
     }
     
+    public void WareHouse() {
+        System.out.println("You selected Buy land...");
+        BuyLandView buyland = new BuyLandView();
+        buyland.display();
 }
-
+    public void BuyLand() {
+        System.out.println("You selected Ware House...");
+        WareHouseView warehouse = new  WareHouseView();
+        warehouse.display();
+}
+}

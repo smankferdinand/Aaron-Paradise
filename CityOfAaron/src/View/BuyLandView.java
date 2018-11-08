@@ -19,7 +19,8 @@ public class BuyLandView {
         boolean done = false;
         do {            
             System.out.println  ("B - Buy Land\n" 
-                                 +"S- Sell Land\n"
+                                 +"S- Sell Land\n" 
+                                 +"G- Game Menu\n"
                                 +"R - Return to previous Menu\n");
             String input = getInput();
             done = doAction(input);
@@ -43,7 +44,10 @@ public class BuyLandView {
                 break;
             case "S":
                 SellLand();
-                break;   
+                break; 
+            case "G":
+                GameMenu();
+                break;
             default: System.out.println("Invalid option, please try again...");
         }
         return false;
@@ -57,5 +61,9 @@ public class BuyLandView {
     private void SellLand() {
         System.out.println("Please, use this \"S\" option to know the number of lands available to S,\n"
                 + " and verify the location");
+    }
+
+    private void GameMenu() {
+       System.out.println("Please, use this \"G\" option to return to the game menu");
     }
 }

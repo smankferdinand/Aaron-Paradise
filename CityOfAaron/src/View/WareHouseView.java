@@ -18,7 +18,8 @@ public class WareHouseView {
         public void display(){
         boolean done = false;
         do {            
-            System.out.println  ("W - Ware House\n"
+            System.out.println  ("W - Ware House\n" 
+                                 +"G- Game Menu\n"
                                 +"R - Return to previous Menu\n");
             String input = getInput();
             done = doAction(input);
@@ -40,6 +41,9 @@ public class WareHouseView {
             case "W":
                 WareHouse();
                 break;
+            case "G":
+                GameMenu();
+                break;
             default: System.out.println("Invalid option, please try again...");
         }
         return false;
@@ -49,5 +53,8 @@ public class WareHouseView {
         System.out.println("Please, use this \"W\" option to know the number of Items stored in the Ware House,\n"
                 + " and make preparetion for future references");
    }
+   private void GameMenu() {
+       System.out.println("Please, use this \"G\" option to return to the game menu");
+    }
 }
 
