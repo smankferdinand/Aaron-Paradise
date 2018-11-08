@@ -110,14 +110,15 @@ public class GameMenuView {
         System.out.println("You selected Save Game...");
     }
     
-    public void WareHouse() {
+    public void BuyLand() {
         System.out.println("You selected Buy land...");
         BuyLandView buyland = new BuyLandView();
         buyland.display();
-}
-    public void BuyLand() {
+ }
+
+    public void WareHouse() {
         System.out.println("You selected Ware House...");
         WareHouseView warehouse = new  WareHouseView();
         warehouse.display();
-}
+  }
 }
