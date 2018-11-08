@@ -82,10 +82,14 @@ public class GameMenuView {
     
     public void manageCrops() {
         System.out.println("You selected Manage Crops...");
+        ManageCropsView Manacrop = new ManageCropsView();
+        Manacrop.display();
     }
         
     public void liveYear() {
         System.out.println("You selected Live Year...");
+        LiveYearsView LivYear = new LiveYearsView();
+        LivYear.display();
     }
     
     public void reportMenu() {
