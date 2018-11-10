@@ -19,8 +19,8 @@ public class BuyLandView {
         boolean done = false;
         do {            
             System.out.println  ("B - Buy Land\n" 
-                                 +"S- Sell Land\n" 
-                                 +"G- Game Menu\n"
+                                +"S - Sell Land\n" 
+                                +"G - Game Menu\n"
                                 +"R - Return to previous Menu\n");
             String input = getInput();
             done = doAction(input);
@@ -37,7 +37,7 @@ public class BuyLandView {
         input = input.toUpperCase();
         switch (input){
             case "R":
-      System.out.println("Returning to previous Menu...");
+                System.out.println("Returning to previous Menu...");
                 return true;
             case "B":
                 BuyLand();

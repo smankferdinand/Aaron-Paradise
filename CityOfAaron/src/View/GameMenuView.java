@@ -15,16 +15,7 @@ import java.util.Scanner;
 public class GameMenuView {
 
     public GameMenuView() {
-    }
-//l for listo of items
-//list of locations visited
-// 
-//        move
-//        ask location to move
-//        ask for map simbol
-                
-                
-                
+    }           
                 
     public void display() {
         boolean done = false;
@@ -35,8 +26,8 @@ public class GameMenuView {
                             + "L - Live the Year\n"
                             + "R - Reports Menu\n "
                             + "S - Save Game\n"   
-                            +"B-Buy Land\n" 
-                            +"W-Ware House\n"
+                            + "B - Buy Land\n" 
+                            + "W - Ware House\n"
                             + "E - Return to the Main Menu\n");
             String input = getInput();
             done = doAction(input);
@@ -112,13 +103,13 @@ public class GameMenuView {
     
     public void BuyLand() {
         System.out.println("You selected Buy land...");
-        BuyLandView buyland = new BuyLandView();
-        buyland.display();
+        BuyLandView buyLand = new BuyLandView();
+        buyLand.display();
  }
 
     public void WareHouse() {
         System.out.println("You selected Ware House...");
-        WareHouseView warehouse = new  WareHouseView();
-        warehouse.display();
+        WareHouseView wareHouse = new  WareHouseView();
+        wareHouse.display();
   }
 }
