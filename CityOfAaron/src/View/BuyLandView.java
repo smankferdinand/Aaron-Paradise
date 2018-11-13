@@ -35,6 +35,7 @@ public class BuyLandView {
     
     public boolean doAction(String input){
         input = input.toUpperCase();
+         input = input.toLowerCase();
         switch (input){
             case "R":
                 System.out.println("Returning to previous Menu...");
