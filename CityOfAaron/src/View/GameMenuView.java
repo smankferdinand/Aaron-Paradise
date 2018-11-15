@@ -12,7 +12,7 @@ import java.util.Scanner;
  *
  * @author SG0206641
  */
-public class GameMenuView {
+public abstract class GameMenuView extends SuperView {
 
     public GameMenuView() {
     }           
@@ -75,7 +75,7 @@ public class GameMenuView {
 
     public void newLocation() {
         System.out.println("You selected New Location...");
-        NewLocationView newLoc = new NewLocationView();
+        NewLocationView newLoc = new NewLocationView() {};
         newLoc.display();
     }
     

@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Smank Ferdinand
  */
-public class BuyLandView {
+public abstract class BuyLandView extends SuperView{
   public BuyLandView() {
     }
     

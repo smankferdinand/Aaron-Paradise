@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Rafael.M
  */
-public class ManageCropsView {
+public abstract class ManageCropsView extends SuperView{
 
     public ManageCropsView() {
     }

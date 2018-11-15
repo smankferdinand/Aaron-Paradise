@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author David Carsin
  */
-public class NewLocationView {
+public abstract class NewLocationView extends SuperView{
 
     public NewLocationView() {
     }

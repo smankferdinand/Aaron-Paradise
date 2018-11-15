@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author SG0206641
  */
-public class StartProgramView {
+public abstract class StartProgramView extends SuperView{
 
     public StartProgramView() {
     }

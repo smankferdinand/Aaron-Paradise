@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author SG0206641
  */
-public class HelpMenu {
+public abstract class HelpMenu extends SuperView{
 
     public HelpMenu() {
     }

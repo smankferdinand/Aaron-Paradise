@@ -12,7 +12,7 @@ import java.util.Scanner;
  *
  * @author SG0206641
  */
-public class MainMenu {
+public abstract class MainMenu extends SuperView{
 
     public MainMenu() {
         
