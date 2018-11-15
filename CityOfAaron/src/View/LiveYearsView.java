@@ -77,7 +77,7 @@ public class LiveYearsView {
     }
 
     private void ViewAnnualReport() {
-        System.out.println("Verify the annual report for any stadisty for all the resourse in a year \n"
+        System.out.println("Verify the annual report for any stadisty for all the resourse in a year, \n"
                 + "Please, use \"V\" option.");
     }
 
@@ -87,7 +87,7 @@ public class LiveYearsView {
     }
 
     private void AnnualwheatPaidoffering() {
-        System.out.println("How many could i paid the offering in a year? \n"
+        System.out.println("How many could i paid the offering in a year?, \n"
                 + "Please, verify the total, amount using this \"O\" option");
     }
 

@@ -30,7 +30,7 @@ public class HarvestCropsTest {
         TEST CASE # 1
         /////////////////////////////////////
         */
-        System.out.println("\tTes number 01");
+        System.out.println("\tTest number 01");
         //input for users 
         int wheats  = 50;
         int tithes  = 5500;
@@ -48,7 +48,7 @@ public class HarvestCropsTest {
         TEST CASE # 2
         /////////////////////////////////////
         */
-       System.out.println("\tTes number 02");
+       System.out.println("\tTest number 02");
         //input for users 
         wheats  = 80;
         tithes  = 3200;
@@ -65,7 +65,7 @@ public class HarvestCropsTest {
         TEST CASE # 3
         /////////////////////////////////////
         */
-         System.out.println("\tTes number 03");
+         System.out.println("\tTest number 03");
         //input for users 
          wheats  = 90;
          tithes  = 6250;
@@ -81,7 +81,7 @@ public class HarvestCropsTest {
         TEST CASE # 4
         /////////////////////////////////////
         */
-        System.out.println("\tTes number 04");
+        System.out.println("\tTest number 04");
         //input for users 
          wheats  = 70;
          tithes  = 9050;
@@ -98,7 +98,7 @@ public class HarvestCropsTest {
         TEST CASE # 5
         /////////////////////////////////////
         */
-         System.out.println("\tTes number 05");
+         System.out.println("\tTest number 05");
         //input for users 
          wheats  = 10;
          tithes  = 5500;
@@ -116,7 +116,7 @@ public class HarvestCropsTest {
         TEST CASE # 6
         /////////////////////////////////////
         */
-        System.out.println("\tTes number 06");
+        System.out.println("\tTest number 06");
         //input for users 
          wheats  = 30;
          tithes  = 2010;
@@ -134,7 +134,7 @@ public class HarvestCropsTest {
         TEST CASE # 7
         /////////////////////////////////////
         */
-         System.out.println("\tTes number 07");
+         System.out.println("\tTest number 07");
         //input for users 
          wheats  = 5;
          tithes  = 56;

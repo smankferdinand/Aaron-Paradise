@@ -18,7 +18,9 @@ import Model.Point;
 import Model.Provision;
 import Model.Question;
 import Model.Game;
+import View.LiveYearsView;
 import View.StartProgramView;
+import View.ManageCropsView;
 
 /**
  * Rafael Monzón
@@ -30,12 +32,21 @@ public class CityOfAaron {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    
+  /**  public static void main(String[] args) {
+        /*
         StartProgramView startView = new StartProgramView();
-        startView.display();
-      
+        startView.display();*/
+        /**
+        ManageCropsView MAcrop = new ManageCropsView();
+        MAcrop.display();
+        /*
+        LiveYearsView LifeView = new LiveYearsView();
+        LifeView.display();*/
+
         
-    }
+    
+
 //        int bushels = 10;
 //        int wheatInStorage = 100;
 //       //call the class 
@@ -64,15 +75,17 @@ public class CityOfAaron {
 //        return grouth;
 //    }
 //       
-    public static void TestClasses(){
+    
+       public static void main(String[] args) {
+    
                 /// Calculate The  amount wheat eaten by rats 
         int rnd = Random(1,100);
         int wheat = 150;
         //ControlLayer test1 = new ControlLayer();
         int eaterRats = ControlLayer.wheatRatEaten(rnd, wheat);
         System.out.println("Wheat Rat Eaten =" + eaterRats);
-        
-        
+    
+    
         // Calculate The amount Harvest crop yield for bear the Tithes and offerings
         int sort = Random(1,100);
         int grouth = 56;
@@ -155,10 +168,11 @@ public class CityOfAaron {
          MyAuthor.setName("Rafael Monzon");
          String BestAuthor = MyAuthor.getName();
          System.out.println("Author = " + BestAuthor);
-    }
-    private static int Random(int i, int i0) {
+       }
+        private static int Random(int i, int i0) {
         return 5;
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+
 }
-//}

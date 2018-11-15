@@ -69,29 +69,29 @@ public class ManageCropsView {
     }
 
     private void ViewCurrentPercentagesofCrop() {
-        System.out.println("How many crops do you think have you?, You can use this \"V\" option,"
+        System.out.println("How many crops do you think have you?, You can use this \"V\" option,\n"
                 + " to control all your crop.  ");
     }
 
     private void MovetoaField() {
-        System.out.println("Please, use this \"F\" option to move into your fields and,"
+        System.out.println("Please, use this \"F\" option to move into your fields and,\n"
                 + " verify where are you?");
     }
 
     private void ManageAmountofWheat() {
-        System.out.println("Please, use this \"M\" option to verify the amount of your Wheat,"
+        System.out.println("Please, use this \"M\" option to verify the amount of your Wheat,\n"
                 + " and be ready to use it to feed the people or sell. ");
     }
 
     private void TotalAmountofWheat() {
-        System.out.println("Do you know how many wheat do you have after the collected your crop?"
-                + " so please, use this \"T\" option to view the total amount of your wheat,"
+        System.out.println("Do you know how many wheat do you have after the collected your crop?\n"
+                + " so please, use this \"T\" option to view the total amount of your wheat,\n"
                 + " and try to sell and exchange for new resources. Good luck !!!");
     }
 
     private void ReportsOftheCrops() {
-        System.out.println("Do you want to view the statistics of your crop monthly? ,"
-                + " Please use this \"R\" option for verifying the production monthly,"
+        System.out.println("Do you want to view the statistics of your crop monthly?\n"
+                + " Please use this \"R\" option for verifying the production monthly,\n"
                 + " and view the resources you have through your crop. ");
     }
 
