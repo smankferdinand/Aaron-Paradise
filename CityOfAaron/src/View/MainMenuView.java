@@ -12,12 +12,21 @@ import java.util.Scanner;
  *
  * @author SG0206641
  */
-public abstract class MainMenuView extends View{
+public abstract class MainMenuView extends View {
 
-    public MainMenuView() {       
-        
+    public MainMenuView(String[] inputs) {
+        View("*****************************************************\n"
+                + "***   Welcome : Great City Of Aarom MAIN MENU     ***\n"
+                + "*****************************************************\n"
+                + " N - Start New Game\n L - Load a Saved Game\n"
+                + " H - Get Help \n S - Save Game\n Q - Quit or Exit\n");
+
+        String MainMenuView = this.getInput(displayMessage);
+        inputs[0] = MainMenuView;
+
     }
-    
+
+    /*
     public void display(){
         boolean done = false;
         do {            
@@ -30,15 +39,17 @@ public abstract class MainMenuView extends View{
             done = doAction(input);
         } while (!done);
     }
-    
-    public String getInput(){
+     */
+    public String getInput() {
         Scanner keyboard = new Scanner(System.in);
         String choice = keyboard.nextLine();
         return choice;
     }
-    public boolean doAction(String input){
+
+    
+    public boolean doAction(String input) {
         input = input.toUpperCase();
-        switch (input){
+        switch (input) {
             case "Q":
                 System.out.println("Thanks for playing...");
                 return true;
@@ -49,12 +60,13 @@ public abstract class MainMenuView extends View{
                 helpGame();
                 break;
             case "L":
-               loadGame();
+                loadGame();
                 break;
             case "S":
-               saveGame();
+                saveGame();
                 break;
-            default: System.out.println("Invalid option, please try again...");
+            default:
+                System.out.println("Invalid option, please try again...");
         }
         return false;
     }
@@ -64,29 +76,33 @@ public abstract class MainMenuView extends View{
         //HelpMenuView help = new HelpMenuView();
         //help.display();
     }
-    
+
     private void startNewGame() {
         System.out.println("You have called option N for New Game...");
-      
-      // Prompt for and get the user's name
+
+        // Prompt for and get the user's name
         String name;
         Scanner keyboard = new Scanner(System.in);
         System.out.println("Please type in your first name: ");
         name = keyboard.nextLine();
-        
-         // Display a welcome message
-        System.out.println("Welcome " + name + ". Have fun playing."); 
-         
+
+        // Display a welcome message
+        System.out.println("Welcome " + name + ". Have fun playing.");
+
         //show the game menu
         //GameMenuView gmv = new GameMenuView();
         //gmv.display();
     }
-        
+
     private void loadGame() {
         System.out.println("You have called option L for Load Game...");
     }
-    
+
     private void saveGame() {
         System.out.println("You have called option S to Save Game...");
+    }
+
+    private void View(String string) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

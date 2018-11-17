@@ -6,6 +6,7 @@
 package View;
 
 import java.util.Scanner;
+import static jdk.nashorn.tools.ShellFunctions.input;
 
 /**
  *
@@ -13,16 +14,20 @@ import java.util.Scanner;
  */
 public abstract class StartProgramView extends View{
 
-    public StartProgramView(String message) {
-        View(message);
-    }
-
-    public void StartProgramView() {
+    public StartProgramView(String [] inputs) {
         View("***********************************************************\n"+
              "**** Welcome to the City of Aaron Game. Awesome Game! *****\n"+
              "***********************************************************\n");
+        
+        String StartProgramView = this.getInput(displayMessage);
+    inputs[0] = StartProgramView;
     }
-    /*
+     /* new methods input     
+    String StartProgramView = this.getInput(displayMessage);
+    inputs[0] = StartProgramView;
+   */
+    
+    /* old method 
     @Override
     public void display(){
         System.out.println  ("***********************************************************\n"
@@ -33,6 +38,8 @@ public abstract class StartProgramView extends View{
         //main.display();
     }
     */
+    
+    
     public void getInput(){
         Scanner keyboard = new Scanner(System.in);
         String name = "";
@@ -47,6 +54,7 @@ public abstract class StartProgramView extends View{
         System.out.println  ("***********************************************************\n");
         
     }
+  
 
     private void View(String string) {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

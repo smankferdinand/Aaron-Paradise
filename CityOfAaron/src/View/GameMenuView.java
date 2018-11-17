@@ -14,9 +14,22 @@ import java.util.Scanner;
  */
 public abstract class GameMenuView extends View {
 
-    public GameMenuView() {
-    }           
-                
+    public GameMenuView(String[] inputs) {
+        View("V - View the map\n "
+                + "M - Move to a new location\n"
+                + "C - Manage the Crops\n "
+                + "L - Live the Year\n"
+                + "R - Reports Menu\n "
+                + "S - Save Game\n"
+                + "B - Buy Land\n"
+                + "W - Ware House\n"
+                + "E - Return to the Main Menu\n");
+        String GameMenuView = this.getInput(displayMessage);
+        inputs[0] = GameMenuView;
+
+    }
+
+    /*          
     public void display() {
         boolean done = false;
         do {
@@ -33,13 +46,13 @@ public abstract class GameMenuView extends View {
             done = doAction(input);
         } while (!done);
     }
-
+     */
     public String getInput() {
         Scanner keyboard = new Scanner(System.in);
         String choice = keyboard.nextLine();
         return choice;
     }
-    
+
     public boolean doAction(String input) {
         input = input.toUpperCase();
         switch (input) {
@@ -64,7 +77,7 @@ public abstract class GameMenuView extends View {
             case "B":
                 BuyLand();
                 break;
-             case "W":
+            case "W":
                 WareHouse();
                 break;
             default:
@@ -78,38 +91,42 @@ public abstract class GameMenuView extends View {
         //NewLocationView newLoc = new NewLocationView();
         //newLoc.display();
     }
-    
+
     public void manageCrops() {
         System.out.println("You selected Manage Crops...");
         //ManageCropsView Manacrop = new ManageCropsView();
         //Manacrop.display();
     }
-        
+
     public void liveYear() {
         System.out.println("You selected Live Year...");
         //LiveYearsView LivYear = new LiveYearsView();
         //LivYear.display();
     }
-    
+
     public void reportMenu() {
         System.out.println("You selected Report Menu...");
         //ReportMenuView report = new ReportMenuView();
         //report.display();
     }
-    
+
     public void saveGame() {
         System.out.println("You selected Save Game...");
     }
-    
+
     public void BuyLand() {
         System.out.println("You selected Buy land...");
         //BuyLandView buyLand = new BuyLandView();
         //buyLand.display();
- }
+    }
 
     public void WareHouse() {
         System.out.println("You selected Ware House...");
         //WareHouseView wareHouse = new  WareHouseView();
         //wareHouse.display();
-  }
+    }
+
+    private void View(String string) {
+        // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

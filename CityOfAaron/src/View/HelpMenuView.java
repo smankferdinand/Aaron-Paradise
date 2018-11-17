@@ -11,19 +11,23 @@ import java.util.Scanner;
  *
  * @author SG0206641
  */
-public abstract class HelpMenuView extends View{
+public abstract class HelpMenuView extends View {
+
     private String promptMessage;
 
-    public HelpMenuView() {
-        SuperView("\nPlease select option HELP needed:\n"+
-                     "G - What is the goal of the game?\n"+
-                     "M - How to move\n"+
-                     "E - Estimate the number of resources\n"+
-                     "H - Harvest resources\n"+
-                     "D - Delivering resources to warehouse\n"+
-                     "Q - Quit\n");
+    public HelpMenuView(String[] inputs) {
+        SuperView("\nPlease select option HELP needed:\n"
+                + "G - What is the goal of the game?\n"
+                + "M - How to move\n"
+                + "E - Estimate the number of resources\n"
+                + "H - Harvest resources\n"
+                + "D - Delivering resources to warehouse\n"
+                + "Q - Quit\n");
+        String StartProgramView = this.getInput(displayMessage);
+        inputs[0] = StartProgramView;
     }
 
+    /*Old Methods 
     public void display() {
         boolean done = false;
         do {
@@ -38,7 +42,7 @@ public abstract class HelpMenuView extends View{
             done = doAction(input);
         } while (!done);
     }
-
+     */
     public String getInput() {
         Scanner keyboard = new Scanner(System.in);
         String choice = keyboard.nextLine();
