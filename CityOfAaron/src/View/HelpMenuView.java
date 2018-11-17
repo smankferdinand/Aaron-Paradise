@@ -13,44 +13,19 @@ import java.util.Scanner;
  */
 public abstract class HelpMenuView extends View {
 
-    private String promptMessage;
-
-    public HelpMenuView(String[] inputs) {
-        SuperView("\nPlease select option HELP needed:\n"
+    public HelpMenuView() {
+        super("\nPlease select option HELP needed:\n"
                 + "G - What is the goal of the game?\n"
                 + "M - How to move\n"
                 + "E - Estimate the number of resources\n"
                 + "H - Harvest resources\n"
                 + "D - Delivering resources to warehouse\n"
                 + "Q - Quit\n");
-        String StartProgramView = this.getInput(displayMessage);
-        inputs[0] = StartProgramView;
     }
-
-    /*Old Methods 
-    public void display() {
-        boolean done = false;
-        do {
-            System.out.println("\nPlease select option HELP needed:\n"
-                    + "G - What is the goal of the game?\n"
-                    + "M - How to move\n"
-                    + "E - Estimate the number of resources\n"
-                    + "H - Harvest resources\n"
-                    + "D - Delivering resources to warehouse\n"
-                    + "Q - Quit\n");
-            String input = getInput();
-            done = doAction(input);
-        } while (!done);
-    }
-     */
-    public String getInput() {
-        Scanner keyboard = new Scanner(System.in);
-        String choice = keyboard.nextLine();
-        return choice;
-    }
-
+    
+    @Override
     public boolean doAction(String input) {
-        input = input.toUpperCase();
+        input = input.toUpperCase().trim();
         switch (input) {
             case "Q":
                 System.out.println("Thanks for playing...");
@@ -108,7 +83,4 @@ public abstract class HelpMenuView extends View {
                 + "the main menu, if not the user will continue the game. ");
     }
 
-    private void SuperView(String string) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }

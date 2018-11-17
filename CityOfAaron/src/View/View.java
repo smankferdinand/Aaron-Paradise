@@ -20,19 +20,21 @@ public abstract class View implements ViewInterface {
     public View() {
     }
 
+    public View(String message) {
+        displayMessage = message;
+    }
+        
     @Override
     public void display() {
         boolean superView = false;
         do {
-            String[] input = getInputs();
-
-            if (input[0] == null || input.length < 1 || input[0].equalsIgnoreCase("Q")) {
+            String input = getInputs();
+            if (input == null || input.length() < 1 || input.equalsIgnoreCase("Q")) {
                 return;
             } else {
                 superView = doAction(input);
             }
         } while (superView != true);
-
     }
 
     @Override
@@ -59,5 +61,10 @@ public abstract class View implements ViewInterface {
         }
         return inputs[0];
     }
-
+    
+    @Override   
+    public String getInputs(){
+        return getInput(displayMessage);
+        
+    }
 }

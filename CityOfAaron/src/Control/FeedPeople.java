@@ -11,7 +11,6 @@ package Control;
  */
 public class FeedPeople {
     public static int CalculateHarvest(int bushels, int wheatInStorage) {
-        int leftWheat = 0;
         if (bushels < 0)
             return -1;
         if ((wheatInStorage -  bushels) < 0) {

@@ -14,15 +14,12 @@ import java.util.Scanner;
  */
 public abstract class MainMenuView extends View {
 
-    public MainMenuView(String[] inputs) {
-        View("*****************************************************\n"
+    public MainMenuView() {
+        super("*****************************************************\n"
                 + "***   Welcome : Great City Of Aarom MAIN MENU     ***\n"
                 + "*****************************************************\n"
                 + " N - Start New Game\n L - Load a Saved Game\n"
                 + " H - Get Help \n S - Save Game\n Q - Quit or Exit\n");
-
-        String MainMenuView = this.getInput(displayMessage);
-        inputs[0] = MainMenuView;
 
     }
 
@@ -40,13 +37,8 @@ public abstract class MainMenuView extends View {
         } while (!done);
     }
      */
-    public String getInput() {
-        Scanner keyboard = new Scanner(System.in);
-        String choice = keyboard.nextLine();
-        return choice;
-    }
 
-    
+    @Override
     public boolean doAction(String input) {
         input = input.toUpperCase();
         switch (input) {
@@ -102,7 +94,4 @@ public abstract class MainMenuView extends View {
         System.out.println("You have called option S to Save Game...");
     }
 
-    private void View(String string) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }
