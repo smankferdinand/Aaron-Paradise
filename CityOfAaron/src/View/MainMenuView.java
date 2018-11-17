@@ -12,10 +12,9 @@ import java.util.Scanner;
  *
  * @author SG0206641
  */
-public abstract class MainMenu extends SuperView{
+public abstract class MainMenuView extends View{
 
-    public MainMenu() {
-        
+    public MainMenuView() {       
         
     }
     
@@ -62,8 +61,8 @@ public abstract class MainMenu extends SuperView{
 
     private void helpGame() {
         System.out.println("You have called option H for Help...");
-        HelpMenu help = new HelpMenu();
-        help.display();
+        //HelpMenuView help = new HelpMenuView();
+        //help.display();
     }
     
     private void startNewGame() {
@@ -79,8 +78,8 @@ public abstract class MainMenu extends SuperView{
         System.out.println("Welcome " + name + ". Have fun playing."); 
          
         //show the game menu
-        GameMenuView gmv = new GameMenuView();
-        gmv.display();
+        //GameMenuView gmv = new GameMenuView();
+        //gmv.display();
     }
         
     private void loadGame() {

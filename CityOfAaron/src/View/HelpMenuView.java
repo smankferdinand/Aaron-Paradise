@@ -11,9 +11,17 @@ import java.util.Scanner;
  *
  * @author SG0206641
  */
-public abstract class HelpMenu extends SuperView{
+public abstract class HelpMenuView extends View{
+    private String promptMessage;
 
-    public HelpMenu() {
+    public HelpMenuView() {
+        SuperView("\nPlease select option HELP needed:\n"+
+                     "G - What is the goal of the game?\n"+
+                     "M - How to move\n"+
+                     "E - Estimate the number of resources\n"+
+                     "H - Harvest resources\n"+
+                     "D - Delivering resources to warehouse\n"+
+                     "Q - Quit\n");
     }
 
     public void display() {
@@ -94,5 +102,9 @@ public abstract class HelpMenu extends SuperView{
                 + "Doing so, a screen will pop with an option \"Yes or No\",\n"
                 + "asking the user if truly he/she wants to return back to\n"
                 + "the main menu, if not the user will continue the game. ");
+    }
+
+    private void SuperView(String string) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Rafael.M
  */
-public abstract class LiveYearsView extends SuperView{
+public abstract class LiveYearsView extends View{
 
     public LiveYearsView() {
     }

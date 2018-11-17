@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Smank Ferdinand
  */
-public abstract class WareHouseView extends SuperView{
+public abstract class WareHouseView extends View{
     public WareHouseView() {
     }
     

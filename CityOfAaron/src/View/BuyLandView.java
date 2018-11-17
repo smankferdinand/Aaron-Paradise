@@ -11,20 +11,21 @@ import java.util.Scanner;
  *
  * @author Smank Ferdinand
  */
-public abstract class BuyLandView extends SuperView{
+public abstract class BuyLandView extends View{
   public BuyLandView() {
     }
     
         public void display(){
-        boolean done = false;
-        do {            
-            System.out.println  ("B - Buy Land\n" 
-                                +"S - Sell Land\n" 
-                                +"G - Game Menu\n"
-                                +"R - Return to previous Menu\n");
-            String input = getInput();
-            done = doAction(input);
-        } while (!done);
+            boolean done = false;
+            do {            
+                System.out.println  ("B - Buy Land\n" 
+                                    +"S - Sell Land\n" 
+                                    +"G - Game Menu\n"
+                                    +"R - Return to previous Menu\n");
+                String input = getInput();
+                done = doAction(input);
+            } 
+            while (!done);
     }
     
     public String getInput(){

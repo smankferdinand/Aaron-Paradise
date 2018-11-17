@@ -12,7 +12,7 @@ import java.util.Scanner;
  *
  * @author SG0206641
  */
-public abstract class GameMenuView extends SuperView {
+public abstract class GameMenuView extends View {
 
     public GameMenuView() {
     }           
@@ -75,26 +75,26 @@ public abstract class GameMenuView extends SuperView {
 
     public void newLocation() {
         System.out.println("You selected New Location...");
-        NewLocationView newLoc = new NewLocationView() {};
-        newLoc.display();
+        //NewLocationView newLoc = new NewLocationView();
+        //newLoc.display();
     }
     
     public void manageCrops() {
         System.out.println("You selected Manage Crops...");
-        ManageCropsView Manacrop = new ManageCropsView();
-        Manacrop.display();
+        //ManageCropsView Manacrop = new ManageCropsView();
+        //Manacrop.display();
     }
         
     public void liveYear() {
         System.out.println("You selected Live Year...");
-        LiveYearsView LivYear = new LiveYearsView();
-        LivYear.display();
+        //LiveYearsView LivYear = new LiveYearsView();
+        //LivYear.display();
     }
     
     public void reportMenu() {
         System.out.println("You selected Report Menu...");
-        ReportMenuView report = new ReportMenuView();
-        report.display();
+        //ReportMenuView report = new ReportMenuView();
+        //report.display();
     }
     
     public void saveGame() {
@@ -103,13 +103,13 @@ public abstract class GameMenuView extends SuperView {
     
     public void BuyLand() {
         System.out.println("You selected Buy land...");
-        BuyLandView buyLand = new BuyLandView();
-        buyLand.display();
+        //BuyLandView buyLand = new BuyLandView();
+        //buyLand.display();
  }
 
     public void WareHouse() {
         System.out.println("You selected Ware House...");
-        WareHouseView wareHouse = new  WareHouseView();
-        wareHouse.display();
+        //WareHouseView wareHouse = new  WareHouseView();
+        //wareHouse.display();
   }
 }

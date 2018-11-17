@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author David Carsin
  */
-public abstract class ReportMenuView extends SuperView{
+public abstract class ReportMenuView extends View{
 
     public ReportMenuView() {
     }
