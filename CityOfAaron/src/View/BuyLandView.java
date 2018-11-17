@@ -13,9 +13,14 @@ import java.util.Scanner;
  */
 public abstract class BuyLandView extends View{
   public BuyLandView() {
+      view("B - Buy Land\n" 
+                                    +"S - Sell Land\n" 
+                                    +"G - Game Menu\n"
+                                    +"R - Return to previous Menu\n");
     }
-    
-        public void display(){
+    /*
+       @Override 
+       public void display(){
             boolean done = false;
             do {            
                 System.out.println  ("B - Buy Land\n" 
@@ -27,14 +32,14 @@ public abstract class BuyLandView extends View{
             } 
             while (!done);
     }
-    
+    */
     public String getInput(){
         Scanner keyboard = new Scanner(System.in);
         String choice = keyboard.nextLine();
         return choice;
     }
-    
-    public boolean doAction(String input){
+
+public boolean doAction(String input){
         input = input.toUpperCase();
          input = input.toLowerCase();
         switch (input){
@@ -67,5 +72,9 @@ public abstract class BuyLandView extends View{
 
     private void GameMenu() {
        System.out.println("Please, use this \"G\" option to return to the game menu");
+    }
+
+    private void view(String string) {
+       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

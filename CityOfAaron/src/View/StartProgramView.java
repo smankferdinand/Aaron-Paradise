@@ -14,7 +14,7 @@ import java.util.Scanner;
 public abstract class StartProgramView extends View{
 
     public StartProgramView(String message) {
-        super(message);
+        View(message);
     }
 
     public void StartProgramView() {
@@ -22,7 +22,7 @@ public abstract class StartProgramView extends View{
              "**** Welcome to the City of Aaron Game. Awesome Game! *****\n"+
              "***********************************************************\n");
     }
-    
+    /*
     @Override
     public void display(){
         System.out.println  ("***********************************************************\n"
@@ -32,7 +32,7 @@ public abstract class StartProgramView extends View{
         //MainMenuView main = new MainMenuView();
         //main.display();
     }
-    
+    */
     public void getInput(){
         Scanner keyboard = new Scanner(System.in);
         String name = "";
@@ -49,7 +49,7 @@ public abstract class StartProgramView extends View{
     }
 
     private void View(String string) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     public boolean doAction(String input){
