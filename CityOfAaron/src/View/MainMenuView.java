@@ -16,27 +16,14 @@ public abstract class MainMenuView extends View {
 
     public MainMenuView() {
         super("*****************************************************\n"
-                + "***   Welcome : Great City Of Aarom MAIN MENU     ***\n"
-                + "*****************************************************\n"
-                + " N - Start New Game\n L - Load a Saved Game\n"
-                + " H - Get Help \n S - Save Game\n Q - Quit or Exit\n");
-
+            + "***   Welcome : Great City Of Aarom MAIN MENU     ***\n"
+            + "*****************************************************\n"
+            + "N - Start New Game\n"
+            + "L - Load a Saved Game\n"
+            + "H - Get Help \n"
+            + "S - Save Game\n"
+            + "Q - Quit or Exit\n");
     }
-
-    /*
-    public void display(){
-        boolean done = false;
-        do {            
-            System.out.println("*****************************************************\n"
-                         + "***   Welcome : Great City Of Aarom MAIN MENU     ***\n"
-                         + "*****************************************************\n"
-                         + " N - Start New Game\n L - Load a Saved Game\n"
-                         + " H - Get Help \n S - Save Game\n Q - Quit or Exit\n");
-            String input = getInput();
-            done = doAction(input);
-        } while (!done);
-    }
-     */
 
     @Override
     public boolean doAction(String input) {
@@ -65,8 +52,8 @@ public abstract class MainMenuView extends View {
 
     private void helpGame() {
         System.out.println("You have called option H for Help...");
-        //HelpMenuView help = new HelpMenuView();
-        //help.display();
+        HelpMenuView help = new HelpMenuView() {};
+        help.display();
     }
 
     private void startNewGame() {
@@ -82,8 +69,8 @@ public abstract class MainMenuView extends View {
         System.out.println("Welcome " + name + ". Have fun playing.");
 
         //show the game menu
-        //GameMenuView gmv = new GameMenuView();
-        //gmv.display();
+        GameMenuView gmv = new GameMenuView() {};
+        gmv.display();
     }
 
     private void loadGame() {

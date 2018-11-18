@@ -12,10 +12,8 @@ import java.util.Scanner;
  * @author Rafael.M
  */
 public abstract class View implements ViewInterface {
-// Declare my variables 
-
+    // Declare my variables 
     protected String displayMessage;
-    private String getInput;
 
     public View() {
     }
@@ -39,27 +37,24 @@ public abstract class View implements ViewInterface {
 
     @Override
     public String getInput(String promptMessage) {
-
-        String[] inputs = new String[1];
+        String input = "";
         boolean valid = false;
-
         while (valid == false) {
             Scanner inFile;
             inFile = new Scanner(System.in);
             System.out.println(promptMessage);
 
-            inputs[0] = inFile.nextLine();
-
-            String selection = inputs[0].trim();
-
-            if (selection.length() < 1) {
+            input = inFile.nextLine();
+            String selection = input.trim();
+            if (selection.length() < 1){
                 System.out.println("\n You need specify a value\n");
-                continue;
-            }
-            inputs[0] = selection;
-            valid = true;
+            }                
+            else{
+                input = selection;
+                valid = true;
+            }            
         }
-        return inputs[0];
+        return input;
     }
     
     @Override   

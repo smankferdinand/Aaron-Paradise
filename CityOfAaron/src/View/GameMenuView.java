@@ -5,8 +5,6 @@
  */
 package View;
 
-import Model.Game;
-import java.util.Scanner;
 
 /**
  *
@@ -14,45 +12,19 @@ import java.util.Scanner;
  */
 public abstract class GameMenuView extends View {
 
-    public GameMenuView(String[] inputs) {
-        View("V - View the map\n "
+    public GameMenuView() {
+        super("V - View the map\n"
                 + "M - Move to a new location\n"
-                + "C - Manage the Crops\n "
+                + "C - Manage the Crops\n"
                 + "L - Live the Year\n"
-                + "R - Reports Menu\n "
+                + "R - Reports Menu\n"
                 + "S - Save Game\n"
                 + "B - Buy Land\n"
                 + "W - Ware House\n"
                 + "E - Return to the Main Menu\n");
-        String GameMenuView = this.getInput(displayMessage);
-        inputs[0] = GameMenuView;
-
     }
-
-    /*          
-    public void display() {
-        boolean done = false;
-        do {
-            System.out.println("V - View the map\n "
-                            + "M - Move to a new location\n"
-                            + "C - Manage the Crops\n "
-                            + "L - Live the Year\n"
-                            + "R - Reports Menu\n "
-                            + "S - Save Game\n"   
-                            + "B - Buy Land\n" 
-                            + "W - Ware House\n"
-                            + "E - Return to the Main Menu\n");
-            String input = getInput();
-            done = doAction(input);
-        } while (!done);
-    }
-     */
-    public String getInput() {
-        Scanner keyboard = new Scanner(System.in);
-        String choice = keyboard.nextLine();
-        return choice;
-    }
-
+    
+    @Override
     public boolean doAction(String input) {
         input = input.toUpperCase();
         switch (input) {
@@ -126,7 +98,4 @@ public abstract class GameMenuView extends View {
         //wareHouse.display();
     }
 
-    private void View(String string) {
-        // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }
