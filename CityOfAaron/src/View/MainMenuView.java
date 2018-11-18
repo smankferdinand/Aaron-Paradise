@@ -19,7 +19,8 @@ public abstract class MainMenuView extends View {
             + "***   Welcome : Great City Of Aarom MAIN MENU     ***\n"
             + "*****************************************************\n"
             + "A - L09: Individual Assignment DAVID\n"     
-            + "B - L09: Individual Assignment RAFAEL\n"     
+            + "B - L09: Individual Assignment RAFAEL\n"
+            + "C - L09: Individual Assignment Ferdinand\n"
             + "N - Start New Game\n"
             + "L - Load a Saved Game\n"
             + "H - Get Help \n"
@@ -31,6 +32,10 @@ public abstract class MainMenuView extends View {
     public boolean doAction(String input) {
         input = input.toUpperCase();
         switch (input) {
+            case "C":
+                WaterStub  waterStub = new WaterStub() {};
+                waterStub.display();
+                return true;
             case "B":
                 CropsStub  newStub = new CropsStub() {};
                 newStub.display();
