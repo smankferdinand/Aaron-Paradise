@@ -20,6 +20,7 @@ package cityofaaron;
 import Model.Game;
 import Model.Player;
 import View.StartProgramView;
+import View.ControlStub;
 //import View.ManageCropsView;
 
 /**
@@ -35,9 +36,10 @@ public class CityOfAaron {
     
     public static void main(String[] args) {
         
+        
         StartProgramView startView = new StartProgramView() {};
         startView.display();
-        }
+    }
         /**
         ManageCropsView MAcrop = new ManageCropsView();
         MAcrop.display();
