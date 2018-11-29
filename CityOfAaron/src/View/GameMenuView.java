@@ -15,6 +15,7 @@ public abstract class GameMenuView extends View {
     public GameMenuView() {
         super("V - View the map\n"
                 + "M - Move to a new location\n"
+                + "P - Move player view\n"
                 + "C - Manage the Crops\n"
                 + "L - Live the Year\n"
                 + "R - Reports Menu\n"
@@ -33,6 +34,9 @@ public abstract class GameMenuView extends View {
                 return true;
             case "M":
                 newLocation();
+                break;
+            case "P":
+                moveplayerview();
                 break;
             case "C":
                 manageCrops();
@@ -62,6 +66,11 @@ public abstract class GameMenuView extends View {
         System.out.println("You selected New Location...");
         //NewLocationView newLoc = new NewLocationView();
         //newLoc.display();
+    }
+      public void moveplayerview() {
+        System.out.println("Move player to a view...");
+        //MovePlayerView playerview = new MovePlayerView();
+        //playerview.display();
     }
 
     public void manageCrops() {
